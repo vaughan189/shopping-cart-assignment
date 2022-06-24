@@ -7,13 +7,14 @@ export const Categories = (props) => {
   const { categoriesData } = props;
   return (
     <>
-      {categoriesData.map((item) => {
+      {categoriesData.map((item, index) => {
         return (
           <CategoriesItem
             key={item.id}
             name={item.name}
             description={item.description}
             imageUrl={item.imageUrl}
+            position={index % 2}
           />
         );
       })}
@@ -24,51 +25,101 @@ export const Categories = (props) => {
 const CategoriesItem = (props) => {
   const { name, description, imageUrl, position } = props;
   return (
-    <Card className="CategoriesItem">
-      {/* <Box>
-        <CardContent>
-          <Typography component="div" variant="h5">
-            Live From Space
-          </Typography>
-          <Typography
-            variant="subtitle1"
-            color="text.secondary"
-            component="div"
-          >
-            Mac Miller
-          </Typography>
-        </CardContent>
-      </Box> */}
+    <Card className="CategoriesItem" sx={{ minHeight: 260 }}>
       <Grid
         container
         direction="row"
         justifyContent="center"
         alignItems="center"
       >
-        <Grid item xs={6} sm={6} md={6} xl={6}>
-          <Grid
-            container
-            direction="column"
-            justifyContent="center"
-            alignItems="center"
-            spacing={3}
-          >
-            <Grid item xs={12} sm={12} md={12} xl={12}>
-              {name}
+        {position === 0 && (
+          <>
+            <Grid item xs={4} sm={4} md={4} xl={4}>
+              <CardMedia
+                component="img"
+                height="400"
+                image={imageUrl}
+                alt={name}
+              />
             </Grid>
-            <Grid item xs={12} sm={12} md={12} xl={12}>
-              {description}
+            <Grid item xs={6} sm={6} md={6} xl={6}>
+              <Grid
+                container
+                direction="column"
+                justifyContent="center"
+                alignItems="center"
+                spacing={3}
+              >
+                <Grid
+                  item
+                  xs={12}
+                  sm={12}
+                  md={12}
+                  xl={12}
+                  className="categoryName"
+                >
+                  {name}
+                </Grid>
+                <Grid item xs={12} sm={12} md={12} xl={12}>
+                  {description}
+                </Grid>
+                <Grid item xs={12} sm={12} md={12} xl={12}>
+                  <Button
+                    variant="contained"
+                    color="primary"
+                    style={{ textTransform: "none" }}
+                  >
+                    Explore {name}
+                  </Button>
+                </Grid>
+              </Grid>
             </Grid>
-            <Grid item xs={12} sm={12} md={12} xl={12}>
-              <Button variant="contained" color="primary">
-                Explore {name}
-              </Button>
+          </>
+        )}
+        {position === 1 && (
+          <>
+            <Grid item xs={6} sm={6} md={6} xl={6}>
+              <Grid
+                container
+                direction="column"
+                justifyContent="center"
+                alignItems="center"
+                spacing={3}
+              >
+                <Grid
+                  item
+                  xs={12}
+                  sm={12}
+                  md={12}
+                  xl={12}
+                  className="categoryName"
+                >
+                  {name}
+                </Grid>
+                <Grid item xs={12} sm={12} md={12} xl={12}>
+                  {description}
+                </Grid>
+                <Grid item xs={12} sm={12} md={12} xl={12}>
+                  <Button
+                    variant="contained"
+                    color="primary"
+                    style={{ textTransform: "none" }}
+                  >
+                    Explore {name}
+                  </Button>
+                </Grid>
+              </Grid>
             </Grid>
-          </Grid>
-        </Grid>
-        <Grid item xs={6} sm={6} md={6} xl={6}>
-          <CardMedia component="img" height="400" image={imageUrl} alt={name} />
-        </Grid>
+            <Grid item xs={4} sm={4} md={4} xl={4}>
+              <CardMedia
+                component="img"
+                height="400"
+                image={imageUrl}
+                alt={name}
+              />
+            </Grid>
+          </>
+        )}
       </Grid>
     </Card>
   );

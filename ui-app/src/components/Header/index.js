@@ -7,12 +7,15 @@ import Button from "@mui/material/Button";
 
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 
-import './index.scss'
+import "./index.scss";
 const pages = ["Home", "Products", "Blog"];
 
 export const Header = () => {
   return (
-    <AppBar position="static" style={{ backgroundColor: "#FFFFFF", height: "10%" }}>
+    <AppBar
+      position="static"
+      style={{ backgroundColor: "#FFFFFF", height: "10%" }}
+    >
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <img
@@ -20,7 +23,13 @@ export const Header = () => {
             className="Logo"
             alt="logo"
           />
-          <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
+          <Box
+            sx={{
+              display: { xs: "none", md: "flex", sm:"flex", xl:"flex" },
+              justifyContent: 'center',
+              flexGrow: 1,
+            }}
+          >
             {pages.map((page) => (
               <Button
                 style={{ color: "#000000" }}
@@ -31,13 +40,21 @@ export const Header = () => {
               </Button>
             ))}
           </Box>
-          <Button
-            variant="outlined"
-            startIcon={<ShoppingCartIcon />}
-            color="primary"
+          <Box
+            sx={{
+              flexGrow: 1,
+              display: { xs: "flex", md: "flex", sm:"flex", xl:"flex" },
+              justifyContent: 'flex-end'
+            }}
           >
-            0 Items
-          </Button>
+            <Button
+              variant="outlined"
+              startIcon={<ShoppingCartIcon />}
+              color="primary"
+            >
+              0 Items
+            </Button>
+          </Box>
           {/* <Button
             variant="outlined"
             startIcon={<LoginIcon />}
