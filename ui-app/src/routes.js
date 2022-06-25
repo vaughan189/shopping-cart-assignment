@@ -13,7 +13,7 @@ export const Routes = () => {
       <Route exact path="/" component={Home} />
       <Route exact path="/home" component={Home} />
       <Route exact path="/cart" component={Cart} />
-      <Route exact path="/Products" component={Products} />
+      <Route exact path="/products" component={Products} />
       <Route path="*">
       <NotFound />
     </Route>

@@ -9,11 +9,13 @@ import { Routes } from "./routes";
 function App() {
   return (
     <Router>
-      <Header />
-      <div>
-        <Routes />
-      </div>
-      {/* <Footer /> */}
+      <React.StrictMode>
+        <Header />
+        <div>
+          <Routes />
+        </div>
+        {/* <Footer /> */}
+      </React.StrictMode>
     </Router>
   );
 }

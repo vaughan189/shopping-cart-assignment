@@ -1,4 +1,5 @@
 import * as React from "react";
+import { useHistory } from "react-router-dom";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
@@ -8,13 +9,33 @@ import Button from "@mui/material/Button";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 
 import "./index.scss";
-const pages = ["Home", "Products", "Blog"];
+
+const routes = [
+  {
+    id: 1,
+    name: "Home",
+    path: "/home",
+  },
+  {
+    id: 2,
+    name: "Products",
+    path: "/products",
+  },
+];
 
 export const Header = () => {
+  let history = useHistory();
+
+  const redirectToPage = (path) => {
+    console.log(path);
+    history.push(path);
+  };
+
   return (
     <AppBar
       position="static"
       style={{ backgroundColor: "#FFFFFF", height: "10%" }}
+      sx={{ zIndex: (theme) => theme.zIndex.drawer + 1 }}
     >
       <Container maxWidth="xl">
         <Toolbar disableGutters>
@@ -25,26 +46,27 @@ export const Header = () => {
           />
           <Box
             sx={{
-              display: { xs: "none", md: "flex", sm:"flex", xl:"flex" },
-              justifyContent: 'center',
+              display: { xs: "none", md: "flex", sm: "flex", xl: "flex" },
+              justifyContent: "center",
               flexGrow: 1,
             }}
           >
-            {pages.map((page) => (
+            {routes.map((page) => (
               <Button
                 style={{ color: "#000000" }}
-                key={page}
+                key={page.id}
                 sx={{ my: 2, color: "white", display: "block" }}
+                onClick={() => redirectToPage(page.path)}
               >
-                {page}
+                {page.name}
               </Button>
             ))}
           </Box>
           <Box
             sx={{
               flexGrow: 1,
-              display: { xs: "flex", md: "flex", sm:"flex", xl:"flex" },
-              justifyContent: 'flex-end'
+              display: { xs: "flex", md: "flex", sm: "flex", xl: "flex" },
+              justifyContent: "flex-end",
             }}
           >
             <Button
@@ -55,13 +77,6 @@ export const Header = () => {
               0 Items
             </Button>
           </Box>
-          {/* <Button
-            variant="outlined"
-            startIcon={<LoginIcon />}
-            color="primary"
-          >
-            Login
-          </Button> */}
         </Toolbar>
       </Container>
     </AppBar>
