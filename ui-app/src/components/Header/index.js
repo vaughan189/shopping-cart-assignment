@@ -27,13 +27,12 @@ export const Header = () => {
   let history = useHistory();
 
   const redirectToPage = (path) => {
-    console.log(path);
     history.push(path);
   };
 
   return (
     <AppBar
-      position="static"
+      position="fixed"
       style={{ backgroundColor: "#FFFFFF", height: "10%" }}
       sx={{ zIndex: (theme) => theme.zIndex.drawer + 1 }}
     >
