@@ -1,6 +1,13 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import React, { useEffect, useState } from "react";
-import { Box, Container, Grid } from "@mui/material";
+import {
+  Box,
+  Container,
+  FormControl,
+  Grid,
+  MenuItem,
+  Select,
+} from "@mui/material";
 
 import { Sidebar } from "../../components/Sidebar";
 import useAxios from "../../api/useAxios";
@@ -45,6 +52,11 @@ export const Products = () => {
     });
   };
 
+  const handleCategorySelection = (id) => {
+    if (filterSelection !== id) setFilterSelection(id);
+    else if (filterSelection === id) setFilterSelection("");
+  };
+
   useEffect(() => {
     getProductsList();
     getCategoriesList();
@@ -75,6 +87,39 @@ export const Products = () => {
         <Grid container direction="row" justifyContent="flex-start">
           <Box
             sx={{
+              marginTop: 2,
+              marginBottom: 2,
+              display: { xs: "contents", sm: "none" },
+            }}
+          >
+            <FormControl fullWidth>
+              <Select
+                id="demo-simple-select"
+                sx={{ color: "#FFFFFF", backgroundColor: "#c73f6d" }}
+                value={filterSelection}
+                MenuProps={{}}
+              >
+                <MenuItem value="" onClick={() => handleCategorySelection("")}>
+                  Select Category
+                </MenuItem>
+                {categoriesData &&
+                  categoriesData.data &&
+                  categoriesData.data.map((item) => {
+                    return (
+                      <MenuItem
+                        key={item.key}
+                        value={item.id}
+                        onClick={() => handleCategorySelection(item.id)}
+                      >
+                        {item.name}
+                      </MenuItem>
+                    );
+                  })}
+              </Select>
+            </FormControl>
+          </Box>
+          <Box
+            sx={{
               display: { xs: "none", sm: "contents" },
             }}
           >
@@ -83,8 +128,7 @@ export const Products = () => {
                 <Grid container direction="column">
                   <Sidebar
                     categoriesData={categoriesData.data}
-                    filterSelection={filterSelection}
-                    setFilterSelection={setFilterSelection}
+                    handleCategorySelection={handleCategorySelection}
                   />
                 </Grid>
               )}

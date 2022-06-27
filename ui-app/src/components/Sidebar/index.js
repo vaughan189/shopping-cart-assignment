@@ -10,12 +10,7 @@ import "./index.scss";
 import { Box } from "@mui/system";
 
 export const Sidebar = (props) => {
-  const { categoriesData, filterSelection, setFilterSelection } = props;
-
-  const handleCategorySelection = (id) => {
-    if (filterSelection !== id) setFilterSelection(id);
-    else if (filterSelection === id) setFilterSelection("");
-  };
+  const { categoriesData, handleCategorySelection } = props;
 
   return (
     <Drawer variant="permanent">
