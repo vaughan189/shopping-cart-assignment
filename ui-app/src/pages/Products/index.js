@@ -70,13 +70,12 @@ export const Products = () => {
   }, [filterSelection]);
 
   return (
-    <Box component="main" sx={{ marginTop: "5%" }}>
+    <Box component="main" sx={{ marginTop: "2%" }}>
       <Container maxWidth="xl">
         <Grid container direction="row" justifyContent="flex-start">
           <Box
             sx={{
               display: { xs: "none", sm: "contents" },
-              width: { sm: "min-content", md: "inherit", xl: "inherit" },
             }}
           >
             <Grid item xs={2} sm={2} md={2} xl={2}>

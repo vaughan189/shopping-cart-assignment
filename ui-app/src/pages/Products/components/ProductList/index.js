@@ -12,8 +12,8 @@ import React from "react";
 export const ProductList = (props) => {
   const { productsData } = props;
   return (
-    <Box sx={{ paddingLeft: "20px", paddingTop: "30px", paddingBottom: '20px' }}>
-      <Grid container direction="row" spacing={2} alignItems="stretch">
+    <Box sx={{ paddingLeft: "0px", paddingBottom: "20px" }}>
+      <Grid container direction="row" spacing={2}>
         {productsData.map((item) => {
           return (
             <Grid
@@ -23,32 +23,57 @@ export const ProductList = (props) => {
               md={3}
               xl={3}
               key={item.id}
-              style={{ display: "flex" }}
+              sx={{ display: "flex" }}
             >
               <Card
                 sx={{
                   display: "flex",
                   flexDirection: "column",
                   justifyContent: "space-between",
-                  width: { xl: 230, md: 230, sm: 300, xs: 350 },
+                  width: { xl: "100%", md: "100%", sm: "100%", xs: "100%" },
                   padding: "15px",
                 }}
               >
-                <Typography
-                  sx={{ fontWeight: "Bold" }}
-                  gutterBottom
-                  variant="h6"
-                  component="div"
+                <Box
+                  sx={{
+                    display: "flex",
+                    flexDirection: "row",
+                  }}
                 >
-                  {item.name}
-                </Typography>
-                <CardMedia
-                  component="img"
-                  sx={{ width: 200 }}
-                  image={item.imageURL}
-                  alt={item.name}
-                />
-                <Box sx={{ display: "flex", flexDirection: "column" }}>
+                  <Typography
+                    sx={{
+                      fontWeight: "Bold",
+                      fontSize: {
+                        xl: "1.25rem",
+                        md: "1.25rem",
+                        sm: "1rem",
+                        xs: "1rem",
+                      },
+                    }}
+                    gutterBottom
+                    variant="h6"
+                    component="div"
+                  >
+                    {item.name}
+                  </Typography>
+                </Box>
+                <Box
+                  sx={{
+                    display: "flex",
+                    flexDirection: {
+                      xs: "row",
+                      sm: "row",
+                      md: "column",
+                      xl: "column",
+                    },
+                  }}
+                >
+                  <CardMedia
+                    component="img"
+                    sx={{ width: { xl: 200, md: 150, sm: 100, xs: 100 } }}
+                    image={item.imageURL}
+                    alt={item.name}
+                  />
                   <CardContent sx={{ flex: "1 0 auto" }}>
                     <Typography
                       sx={{
@@ -63,6 +88,12 @@ export const ProductList = (props) => {
                         borderRadius: "5px",
                         backgroundColor: "rgb(200, 200, 200)",
                         padding: 1,
+                        width: {
+                          xl: "100%",
+                          md: "100%",
+                          sm: "156px",
+                          xs: "156px",
+                        },
                       }}
                       variant="subtitle1"
                       color="text.secondary"
@@ -73,7 +104,12 @@ export const ProductList = (props) => {
                   </CardContent>
                   <Box
                     sx={{
-                      display: "flex",
+                      display: {
+                        xl: "flex",
+                        md: "flex",
+                        sm: "none",
+                        xs: "none",
+                      },
                       flexDirection: "row",
                       justifyContent: "space-around",
                       alignItems: "center",
@@ -88,6 +124,22 @@ export const ProductList = (props) => {
                       </Typography>
                     </Button>
                   </Box>
+                </Box>
+                <Box
+                  sx={{
+                    display: {
+                      xl: "none",
+                      md: "none",
+                      sm: "flex",
+                      xs: "flex",
+                    },
+                  }}
+                >
+                  <Button variant="contained" fullWidth={true}>
+                    <Typography sx={{ fontFamily: "Dosis" }}>
+                      Buy Now @ Rs.{item.price}
+                    </Typography>
+                  </Button>
                 </Box>
               </Card>
             </Grid>

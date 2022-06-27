@@ -32,7 +32,7 @@ export const Header = () => {
 
   return (
     <AppBar
-      position="fixed"
+      position="sticky"
       style={{ backgroundColor: "#FFFFFF", height: "10%" }}
       sx={{ zIndex: (theme) => theme.zIndex.drawer + 1 }}
     >

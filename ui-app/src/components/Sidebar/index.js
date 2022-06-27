@@ -7,6 +7,7 @@ import ListItemButton from "@mui/material/ListItemButton";
 import ListItemText from "@mui/material/ListItemText";
 
 import "./index.scss";
+import { Box } from "@mui/system";
 
 export const Sidebar = (props) => {
   const { categoriesData, filterSelection, setFilterSelection } = props;
@@ -21,7 +22,7 @@ export const Sidebar = (props) => {
       <Toolbar />
       <List>
         {categoriesData.map((item) => (
-          <>
+          <Box key={item.id}>
             <ListItem key={item.id}>
               <ListItemButton onClick={() => handleCategorySelection(item.id)}>
                 <ListItemText
@@ -31,7 +32,7 @@ export const Sidebar = (props) => {
               </ListItemButton>
             </ListItem>
             <Divider />
-          </>
+          </Box>
         ))}
       </List>
     </Drawer>
