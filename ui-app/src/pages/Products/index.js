@@ -90,7 +90,7 @@ export const Products = () => {
               )}
             </Grid>
           </Box>
-          <Grid item xs={10} sm={10} md={10} xl={10}>
+          <Grid item xs={12} sm={10} md={10} xl={10}>
             {!productsDataLoader && (
               <Grid container direction="column">
                 <ProductList productsData={filteredProductsList} />

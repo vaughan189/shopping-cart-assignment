@@ -12,7 +12,12 @@ import React from "react";
 export const ProductList = (props) => {
   const { productsData } = props;
   return (
-    <Box sx={{ paddingLeft: "0px", paddingBottom: "20px" }}>
+    <Box
+      sx={{
+        paddingLeft: { xl: "30px", md: "40px", sm: "0px", xs: "0px" },
+        paddingBottom: "20px",
+      }}
+    >
       <Grid container direction="row" spacing={2}>
         {productsData.map((item) => {
           return (
@@ -70,7 +75,7 @@ export const ProductList = (props) => {
                 >
                   <CardMedia
                     component="img"
-                    sx={{ width: { xl: 200, md: 150, sm: 100, xs: 100 } }}
+                    sx={{ width: { xl: 200, md: 150, sm: 100, xs: 150 } }}
                     image={item.imageURL}
                     alt={item.name}
                   />
@@ -101,6 +106,23 @@ export const ProductList = (props) => {
                     >
                       {item.description}
                     </Typography>
+                    <Box
+                      sx={{
+                        marginTop: 3,
+                        display: {
+                          xl: "none",
+                          md: "none",
+                          sm: "none",
+                          xs: "flex",
+                        },
+                      }}
+                    >
+                      <Button variant="contained" fullWidth={true}>
+                        <Typography sx={{ fontFamily: "Dosis" }}>
+                          Buy Now @ Rs.{item.price}
+                        </Typography>
+                      </Button>
+                    </Box>
                   </CardContent>
                   <Box
                     sx={{
@@ -131,7 +153,7 @@ export const ProductList = (props) => {
                       xl: "none",
                       md: "none",
                       sm: "flex",
-                      xs: "flex",
+                      xs: "none",
                     },
                   }}
                 >
