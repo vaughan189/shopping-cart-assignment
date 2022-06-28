@@ -34,8 +34,18 @@ const CartHeader = () => {
         paddingTop: 2,
         paddingLeft: 2,
         fontWeight: "bold",
-        backgroundColor: "#000000",
-        color: "#FFFFFF",
+        backgroundColor: {
+          xl: "#000000",
+          md: "#000000",
+          sm: "#FFFFFF",
+          xs: "#FFFFFF",
+        },
+        color: {
+          xl: "#FFFFFF",
+          md: "#FFFFFF",
+          sm: "#000000",
+          xs: "#000000",
+        },
         fontFamily: "Dosis",
       }}
     >
@@ -62,7 +72,7 @@ const CheckOutSection = () => {
         flexDirection: "column",
         justifyContent: "centre",
         alignItems: "centre",
-        marginTop: "70%",
+        marginTop: { xl: "70%", md: "70%", sm: "88%", xs: "83%" },
         backgroundColor: "white",
         padding: 2,
       }}

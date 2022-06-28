@@ -10,7 +10,8 @@ import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 
 import "./index.scss";
 import { Cart } from "../Cart";
-import { Popover, Typography } from "@mui/material";
+import { Popover, Typography, useMediaQuery } from "@mui/material";
+import { useTheme } from "@emotion/react";
 
 const routes = [
   {
@@ -27,12 +28,18 @@ const routes = [
 
 export const Header = () => {
   let history = useHistory();
-  // const [open, setOpen] = useState(false);
+
+  const theme = useTheme();
+  const screenIsSM = useMediaQuery(theme.breakpoints.only("sm"));
+  const screenIsXS = useMediaQuery(theme.breakpoints.only("xs"));
 
   const [anchorEl, setAnchorEl] = useState(null);
 
   const handleClick = (event) => {
-    setAnchorEl(event.currentTarget);
+    if (screenIsSM || screenIsXS) {
+      history.push("/cart");
+      return;
+    } else setAnchorEl(event.currentTarget);
   };
 
   const handleClose = () => {
@@ -94,7 +101,6 @@ export const Header = () => {
             >
               0 Items
             </Button>
-
             <Popover
               id={id}
               open={open}
@@ -111,10 +117,11 @@ export const Header = () => {
               PaperProps={{
                 style: {
                   width: "30%",
-                  height: "80%",
+                  // height: "80%",
                   padding: 0,
                   margin: 0,
                   backgroundColor: "#efefef",
+                  zIndex: "inherit",
                 },
               }}
             >
