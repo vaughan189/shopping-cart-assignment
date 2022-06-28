@@ -3,8 +3,10 @@ import React from "react";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import { CartItem } from "../CartItem";
-import { Button } from "@mui/material";
+import { Button, IconButton } from "@mui/material";
 import { LowestPriceSection } from "../LowestPrice";
+
+import ArrowForwardIosSharpIcon from "@mui/icons-material/ArrowForwardIosSharp";
 
 export const Cart = (props) => {
   return (
@@ -95,10 +97,26 @@ const CheckOutSection = () => {
           display: "flex",
           flexDirection: "row",
           justifyContent: "space-between",
+          alignItems: "center",
         }}
       >
         <Typography component="span">Proceed to Checkout</Typography>
-        <Typography component="span">Rs. 187</Typography>
+        <Box
+          sx={{
+            display: "flex",
+            flexDirection: "row",
+            justifyContent: "space-around",
+            alignItems: "center",
+          }}
+        >
+          <Typography component="span">Rs. 187</Typography>
+          <IconButton aria-label="delete" size="small" color="secondary">
+            <ArrowForwardIosSharpIcon
+              fontSize="inherit"
+              sx={{ color: "#FFFFFF" }}
+            />
+          </IconButton>
+        </Box>
       </Button>
     </Box>
   );

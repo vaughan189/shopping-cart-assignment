@@ -26,8 +26,8 @@ export const CartItem = () => {
         >
           <CardMedia
             sx={{
-              width: { xl: 100, md: 150, sm: 100, xs: 150 },
-              height: { xl: 100, md: 150, sm: 100, xs: 150 },
+              width: { xl: 100, md: 50, sm: 100, xs: 100 },
+              height: { xl: 100, md: 50, sm: 100, xs: 100 },
             }}
             component="img"
             height="20"
@@ -67,33 +67,60 @@ export const CartItem = () => {
                   alignItems: "center",
                 }}
               >
-                <IconButton
-                  aria-label="subtract"
+                <Box
                   sx={{
-                    color: "#FFFFFF",
-                    backgroundColor: "#c73f6d",
-                    "&.MuiButtonBase-root:hover": {
-                      bgcolor: "#c73f6d",
-                    },
+                    display: "flex",
+                    flexDirection: "row",
+                    justifyContent: "space-around",
+                    alignItems: "center",
+                    width: {xl: "40%", md:"40%", sm:"40%",xs:"70%"},
                   }}
                 >
-                  <RemoveSharpIcon />
-                </IconButton>
-                <Typography component="div">2</Typography>
-                <IconButton
-                  aria-label="add"
+                  <IconButton
+                    aria-label="subtract"
+                    size="small"
+                    sx={{
+                      height: "20px",
+                      width: "20px",
+                      borderRadius: 0,
+                      color: "#FFFFFF",
+                      backgroundColor: "#c73f6d",
+                      "&.MuiButtonBase-root:hover": {
+                        bgcolor: "#c73f6d",
+                      },
+                    }}
+                  >
+                    <RemoveSharpIcon />
+                  </IconButton>
+                  <Typography component="div">2</Typography>
+                  <IconButton
+                    aria-label="add"
+                    size="small"
+                    sx={{
+                      height: "20px",
+                      width: "20px",
+                      borderRadius: 0,
+                      color: "#FFFFFF",
+                      backgroundColor: "#c73f6d",
+                      "&.MuiButtonBase-root:hover": {
+                        bgcolor: "#c73f6d",
+                      },
+                    }}
+                  >
+                    <AddSharpIcon />
+                  </IconButton>
+                  <Typography component="div">x Rs.187</Typography>
+                </Box>
+                <Box
                   sx={{
-                    color: "#FFFFFF",
-                    backgroundColor: "#c73f6d",
-                    "&.MuiButtonBase-root:hover": {
-                      bgcolor: "#c73f6d",
-                    },
+                    display: "flex",
+                    flexDirection: "row",
+                    justifyContent: "space-around",
+                    alignItems: "center",
                   }}
                 >
-                  <AddSharpIcon />
-                </IconButton>
-                <Typography component="div">x Rs.187</Typography>
-                <Typography component="div">Rs.187</Typography>
+                  <Typography component="div">Rs.187</Typography>
+                </Box>
               </Box>
             </Box>
           </CardContent>
