@@ -1,4 +1,4 @@
-import * as React from "react";
+import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
@@ -9,6 +9,8 @@ import Button from "@mui/material/Button";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 
 import "./index.scss";
+import { Cart } from "../Cart";
+import { Popover, Typography } from "@mui/material";
 
 const routes = [
   {
@@ -25,6 +27,20 @@ const routes = [
 
 export const Header = () => {
   let history = useHistory();
+  // const [open, setOpen] = useState(false);
+
+  const [anchorEl, setAnchorEl] = useState(null);
+
+  const handleClick = (event) => {
+    setAnchorEl(event.currentTarget);
+  };
+
+  const handleClose = () => {
+    setAnchorEl(null);
+  };
+
+  const open = Boolean(anchorEl);
+  const id = open ? "simple-popover" : undefined;
 
   const redirectToPage = (path) => {
     history.push(path);
@@ -69,12 +85,43 @@ export const Header = () => {
             }}
           >
             <Button
+              aria-describedby={id}
               variant="outlined"
               startIcon={<ShoppingCartIcon />}
               color="primary"
+              // onClick={() => setOpen(true)}
+              onClick={handleClick}
             >
               0 Items
             </Button>
+
+            <Popover
+              id={id}
+              open={open}
+              anchorEl={anchorEl}
+              onClose={handleClose}
+              anchorOrigin={{
+                vertical: "bottom",
+                horizontal: "right",
+              }}
+              transformOrigin={{
+                vertical: "top",
+                horizontal: "right",
+              }}
+              PaperProps={{
+                style: {
+                  width: "30%",
+                  height: "80%",
+                  padding: 0,
+                  margin: 0,
+                  backgroundColor: "#efefef",
+                },
+              }}
+            >
+              <Typography component="div">
+                <Cart />
+              </Typography>
+            </Popover>
           </Box>
         </Toolbar>
       </Container>
