@@ -21,15 +21,19 @@ export const Products = () => {
   const {
     response: categoriesData,
     loading: categoriesDataLoader,
-    // error: categoriesDataError,
     fetchData: fetchCategoriesData,
   } = useAxios();
 
   const {
     response: productsData,
     loading: productsDataLoader,
-    // error: productsDataError,
     fetchData: fetchProductsData,
+  } = useAxios();
+
+  const {
+    response: addProductData,
+    loading: addProductDataLoader,
+    fetchData: addProducts,
   } = useAxios();
 
   const getProductsList = () => {
@@ -48,6 +52,24 @@ export const Products = () => {
       url: "http://localhost:3000/categories",
       headers: {
         accept: "*/*",
+      },
+    });
+  };
+
+  const addProductsToCart = (item) => {
+    addProducts({
+      method: "POST",
+      url: "http://localhost:3000/addToCart",
+
+      headers: {
+        accept: "*/*",
+      },
+      data: {
+        productId: item.id,
+        productName: item.name,
+        imageURL: item.imageURL,
+        price: item.price,
+        quantity: 1,
       },
     });
   };
@@ -137,7 +159,10 @@ export const Products = () => {
           <Grid item xs={12} sm={10} md={10} xl={10}>
             {!productsDataLoader && (
               <Grid container direction="column">
-                <ProductList productsData={filteredProductsList} />
+                <ProductList
+                  productsData={filteredProductsList}
+                  addProductsToCart={addProductsToCart}
+                />
               </Grid>
             )}
           </Grid>

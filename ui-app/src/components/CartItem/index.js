@@ -13,7 +13,8 @@ import AddSharpIcon from "@mui/icons-material/AddSharp";
 import RemoveSharpIcon from "@mui/icons-material/RemoveSharp";
 import { Box } from "@mui/system";
 
-export const CartItem = () => {
+export const CartItem = (props) => {
+  const { cartItem } = props;
   return (
     <Card sx={{ margin: 1 }}>
       <CardActionArea>
@@ -31,7 +32,7 @@ export const CartItem = () => {
             }}
             component="img"
             height="20"
-            image="/static/images/products/fruit-n-veg/kiwi-green.jpg"
+            image={cartItem.imageURL}
             alt="green iguana"
           />
           <CardContent
@@ -57,7 +58,7 @@ export const CartItem = () => {
                   },
                 }}
               >
-                Fresho Kiwi - Green, 3 pcs
+                {cartItem.productName}
               </Typography>
               <Box
                 sx={{
@@ -71,9 +72,9 @@ export const CartItem = () => {
                   sx={{
                     display: "flex",
                     flexDirection: "row",
-                    justifyContent: "space-around",
-                    alignItems: "center",
-                    width: {xl: "40%", md:"40%", sm:"40%",xs:"70%"},
+                    justifyContent: "space-evenly",
+                    alignItems: "flex-start",
+                    width: { xl: "40%", md: "40%", sm: "40%", xs: "70%" },
                   }}
                 >
                   <IconButton
@@ -82,7 +83,7 @@ export const CartItem = () => {
                     sx={{
                       height: "20px",
                       width: "20px",
-                      borderRadius: 0,
+                      borderRadius: { xl: 5, md: 5, sm: 0, xs: 0 },
                       color: "#FFFFFF",
                       backgroundColor: "#c73f6d",
                       "&.MuiButtonBase-root:hover": {
@@ -92,14 +93,19 @@ export const CartItem = () => {
                   >
                     <RemoveSharpIcon />
                   </IconButton>
-                  <Typography component="div">2</Typography>
+                  <Typography
+                    sx={{ width: "10px", fontFamily: "Dosis" }}
+                    component="div"
+                  >
+                    {cartItem.quantity}
+                  </Typography>
                   <IconButton
                     aria-label="add"
                     size="small"
                     sx={{
                       height: "20px",
                       width: "20px",
-                      borderRadius: 0,
+                      borderRadius: { xl: 5, md: 5, sm: 0, xs: 0 },
                       color: "#FFFFFF",
                       backgroundColor: "#c73f6d",
                       "&.MuiButtonBase-root:hover": {
@@ -109,7 +115,12 @@ export const CartItem = () => {
                   >
                     <AddSharpIcon />
                   </IconButton>
-                  <Typography component="div">x Rs.187</Typography>
+                  <Typography component="div" sx={{ fontFamily: "Dosis" }}>
+                    X
+                  </Typography>
+                  <Typography component="div" sx={{ fontFamily: "Dosis" }}>
+                    Rs.{cartItem.price}
+                  </Typography>
                 </Box>
                 <Box
                   sx={{
@@ -119,7 +130,9 @@ export const CartItem = () => {
                     alignItems: "center",
                   }}
                 >
-                  <Typography component="div">Rs.187</Typography>
+                  <Typography component="div" sx={{ fontFamily: "Dosis" }}>
+                    Rs. {cartItem.price * cartItem.quantity}
+                  </Typography>
                 </Box>
               </Box>
             </Box>

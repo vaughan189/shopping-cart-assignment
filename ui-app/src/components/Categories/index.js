@@ -1,5 +1,6 @@
-import { Button, Card, CardMedia, Grid } from "@mui/material";
 import React from "react";
+import { useHistory } from "react-router-dom";
+import { Button, Card, CardMedia, Grid } from "@mui/material";
 
 import "./index.scss";
 
@@ -23,6 +24,7 @@ export const Categories = (props) => {
 };
 
 const CategoriesItem = (props) => {
+  let history = useHistory();
   const { name, description, imageUrl, position } = props;
   return (
     <Card className="CategoriesItem" sx={{ minHeight: 260 }}>
@@ -68,6 +70,7 @@ const CategoriesItem = (props) => {
                     variant="contained"
                     color="primary"
                     style={{ textTransform: "none" }}
+                    onClick={() => history.push("/products")}
                   >
                     Explore {name}
                   </Button>
@@ -104,6 +107,7 @@ const CategoriesItem = (props) => {
                     variant="contained"
                     color="primary"
                     style={{ textTransform: "none" }}
+                    onClick={() => history.push("/products")}
                   >
                     Explore {name}
                   </Button>

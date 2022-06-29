@@ -117,7 +117,7 @@ export const Header = () => {
               PaperProps={{
                 style: {
                   width: "30%",
-                  // height: "80%",
+                  height:"80%",
                   padding: 0,
                   margin: 0,
                   backgroundColor: "#efefef",
