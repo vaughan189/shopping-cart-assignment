@@ -23,46 +23,99 @@ export const Cart = () => {
       sx={{
         display: "flex",
         flexDirection: "column",
-        justifyContent: "space-between",
         fontFamily: "Dosis",
       }}
     >
       <Box sx={{}}>
         <CartHeader />
       </Box>
-      <Box sx={{ height: "60%", overflowY: "inherit" }}>
-        {!cartProductsDataLoader && (
-          <>
-            {cartProductList.map((item) => {
-              return (
-                <Box key={item.id}>
-                  <CartItem
-                    cartItem={item}
-                    addProductsToCart={addProductsToCart}
-                    deleteCartItem={deleteCartItem}
-                  />
-                </Box>
-              );
-            })}
-          </>
-        )}
-      </Box>
-      <Box
-        sx={{
-          display: "flex",
-          flexDirection: "column",
-          justifyContent: "space-between",
-        }}
-      >
-        <Box>
-          <LowestPriceSection />
-        </Box>
-        {cartProductList.length > 0 && (
-          <Box>
-            <CheckOutSection cartProductsData={cartProductsData} />
+      {cartProductList.length === 0 && (
+        <>
+          <Box
+            sx={{
+              display: "flex",
+              flexDirection: "column",
+              justifyContent: "Centre",
+              fontFamily: "Dosis",
+              height: "100%",
+            }}
+          >
+            <Typography
+              sx={{
+                display: "flex",
+                flexDirection: "row",
+                justifyContent: "center",
+                fontFamily: "Dosis",
+                fontSize: 25,
+                fontWeight: 600,
+              }}
+            >
+              No items in your cart
+            </Typography>
+            <Typography
+              sx={{
+                display: "flex",
+                flexDirection: "row",
+                justifyContent: "center",
+                fontFamily: "Dosis",
+                fontSize: 18,
+                fontWeight: 400,
+              }}
+            >
+              Your favourite items are just a click away
+            </Typography>
+            <Button
+              variant="contained"
+              sx={{
+                display: "flex",
+                flexDirection: "row",
+                justifyContent: "centre",
+                alignItems: "center",
+                textDecoration: "none",
+              }}
+            >
+              Start Shopping
+            </Button>
           </Box>
-        )}
-      </Box>
+        </>
+      )}
+      {cartProductList.length > 0 && (
+        <>
+          <Box sx={{ height: "60%", overflowY: "inherit" }}>
+            {!cartProductsDataLoader && (
+              <>
+                {cartProductList.map((item) => {
+                  return (
+                    <Box key={item.id}>
+                      <CartItem
+                        cartItem={item}
+                        addProductsToCart={addProductsToCart}
+                        deleteCartItem={deleteCartItem}
+                      />
+                    </Box>
+                  );
+                })}
+              </>
+            )}
+          </Box>
+          <Box
+            sx={{
+              display: "flex",
+              flexDirection: "column",
+              justifyContent: "space-between",
+            }}
+          >
+            <Box>
+              <LowestPriceSection />
+            </Box>
+            {cartProductList.length > 0 && (
+              <Box>
+                <CheckOutSection cartProductsData={cartProductsData} />
+              </Box>
+            )}
+          </Box>
+        </>
+      )}
     </Box>
   );
 };
