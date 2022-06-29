@@ -12,6 +12,7 @@ import "./index.scss";
 import { Cart } from "../Cart";
 import { Popover, Typography, useMediaQuery } from "@mui/material";
 import { useTheme } from "@emotion/react";
+import useCart from "../../hooks/useCart";
 
 const routes = [
   {
@@ -28,10 +29,11 @@ const routes = [
 
 export const Header = () => {
   let history = useHistory();
-
   const theme = useTheme();
   const screenIsSM = useMediaQuery(theme.breakpoints.only("sm"));
   const screenIsXS = useMediaQuery(theme.breakpoints.only("xs"));
+
+  const { cartProductsData } = useCart();
 
   const [anchorEl, setAnchorEl] = useState(null);
 
@@ -99,7 +101,10 @@ export const Header = () => {
               // onClick={() => setOpen(true)}
               onClick={handleClick}
             >
-              0 Items
+              {cartProductsData &&
+                cartProductsData.data &&
+                cartProductsData.data.length}{" "}
+              Items
             </Button>
             <Popover
               id={id}
@@ -117,11 +122,13 @@ export const Header = () => {
               PaperProps={{
                 style: {
                   width: "30%",
-                  height:"80%",
+                  height: "80%",
+                  // height: "calc(100vh - 140px)",
                   padding: 0,
                   margin: 0,
                   backgroundColor: "#efefef",
                   zIndex: "inherit",
+                  // overflow: "hidden"
                 },
               }}
             >

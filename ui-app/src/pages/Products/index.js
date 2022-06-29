@@ -12,11 +12,14 @@ import {
 import { Sidebar } from "../../components/Sidebar";
 import useAxios from "../../api/useAxios";
 import { ProductList } from "./components/ProductList";
+import useCart from "../../hooks/useCart";
 
 export const Products = () => {
   const [filterSelection, setFilterSelection] = useState("");
   const [productsList, setProductsList] = useState([]);
   const [filteredProductsList, setFilteredProductsList] = useState([]);
+
+  const { addProductsToCart } = useCart();
 
   const {
     response: categoriesData,
@@ -28,12 +31,6 @@ export const Products = () => {
     response: productsData,
     loading: productsDataLoader,
     fetchData: fetchProductsData,
-  } = useAxios();
-
-  const {
-    response: addProductData,
-    loading: addProductDataLoader,
-    fetchData: addProducts,
   } = useAxios();
 
   const getProductsList = () => {
@@ -52,24 +49,6 @@ export const Products = () => {
       url: "http://localhost:3000/categories",
       headers: {
         accept: "*/*",
-      },
-    });
-  };
-
-  const addProductsToCart = (item) => {
-    addProducts({
-      method: "POST",
-      url: "http://localhost:3000/addToCart",
-
-      headers: {
-        accept: "*/*",
-      },
-      data: {
-        productId: item.id,
-        productName: item.name,
-        imageURL: item.imageURL,
-        price: item.price,
-        quantity: 1,
       },
     });
   };

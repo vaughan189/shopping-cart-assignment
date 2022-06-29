@@ -11,6 +11,18 @@ const useCart = () => {
     fetchData: fetchCartProducts,
   } = useAxios();
 
+  const {
+    response: deleteCartProductData,
+    // loading: deleteCartProductLoader,
+    fetchData: deleteCartProduct,
+  } = useAxios();
+
+  const {
+    response: addProductData,
+    // loading: addProductDataLoader,
+    fetchData: addProducts,
+  } = useAxios();
+
   const getCartProducts = () => {
     fetchCartProducts({
       method: "GET",
@@ -22,9 +34,37 @@ const useCart = () => {
     });
   };
 
+  const deleteCartItem = (id) => {
+    deleteCartProduct({
+      method: "DELETE",
+      url: `http://localhost:3000/addToCart/${id}`,
+      headers: {
+        accept: "*/*",
+      },
+    });
+  };
+
+  const addProductsToCart = (item) => {
+    addProducts({
+      method: "POST",
+      url: "http://localhost:3000/addToCart",
+
+      headers: {
+        accept: "*/*",
+      },
+      data: {
+        productId: item.productId || item.id,
+        productName: item.name || item.productName,
+        imageURL: item.imageURL,
+        price: item.price,
+        quantity: 1,
+      },
+    });
+  };
+
   useEffect(() => {
     getCartProducts();
-  }, []);
+  }, [deleteCartProductData, addProductData]);
 
   useEffect(() => {
     if (
@@ -33,14 +73,16 @@ const useCart = () => {
       cartProductsData.data.length > 0
     ) {
       setCartProductList(formatCartData(cartProductsData.data));
-    }
-  }, [cartProductsData]);
+    } else setCartProductList([]);
+  }, [cartProductsData, addProductData]);
 
   return {
     cartProductsData,
     cartProductList,
     cartProductsDataLoader,
     getCartProducts,
+    addProductsToCart,
+    deleteCartItem,
   };
 };
 

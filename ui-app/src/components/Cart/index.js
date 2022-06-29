@@ -11,8 +11,13 @@ import ArrowForwardIosSharpIcon from "@mui/icons-material/ArrowForwardIosSharp";
 import useCart from "../../hooks/useCart";
 
 export const Cart = () => {
-  const { cartProductsData, cartProductList, cartProductsDataLoader } =
-    useCart();
+  const {
+    cartProductsData,
+    cartProductList,
+    cartProductsDataLoader,
+    addProductsToCart,
+    deleteCartItem,
+  } = useCart();
   return (
     <Box
       sx={{
@@ -22,20 +27,42 @@ export const Cart = () => {
         fontFamily: "Dosis",
       }}
     >
-      <CartHeader />
-      {!cartProductsDataLoader && (
-        <>
-          {cartProductList.map((item) => {
-            return (
-              <Box key={item.id}>
-                <CartItem cartItem={item} />
-              </Box>
-            );
-          })}
-        </>
-      )}
-      <LowestPriceSection />
-      <CheckOutSection cartProductsData={cartProductsData} />
+      <Box sx={{}}>
+        <CartHeader />
+      </Box>
+      <Box sx={{ height: "60%", overflowY: "inherit" }}>
+        {!cartProductsDataLoader && (
+          <>
+            {cartProductList.map((item) => {
+              return (
+                <Box key={item.id}>
+                  <CartItem
+                    cartItem={item}
+                    addProductsToCart={addProductsToCart}
+                    deleteCartItem={deleteCartItem}
+                  />
+                </Box>
+              );
+            })}
+          </>
+        )}
+      </Box>
+      <Box
+        sx={{
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "space-between",
+        }}
+      >
+        <Box>
+          <LowestPriceSection />
+        </Box>
+        {cartProductList.length > 0 && (
+          <Box>
+            <CheckOutSection cartProductsData={cartProductsData} />
+          </Box>
+        )}
+      </Box>
     </Box>
   );
 };
@@ -114,7 +141,7 @@ const CheckOutSection = (props) => {
         flexDirection: "column",
         justifyContent: "centre",
         alignItems: "centre",
-        marginTop: { xl: "70%", md: "70%", sm: "88%", xs: "83%" },
+        // marginTop: { xl: "70%", md: "70%", sm: "88%", xs: "83%" },
         backgroundColor: "white",
         padding: 2,
       }}

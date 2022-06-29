@@ -14,7 +14,7 @@ import RemoveSharpIcon from "@mui/icons-material/RemoveSharp";
 import { Box } from "@mui/system";
 
 export const CartItem = (props) => {
-  const { cartItem } = props;
+  const { cartItem, deleteCartItem, addProductsToCart } = props;
   return (
     <Card sx={{ margin: 1 }}>
       <CardActionArea>
@@ -90,6 +90,7 @@ export const CartItem = (props) => {
                         bgcolor: "#c73f6d",
                       },
                     }}
+                    onClick={() => deleteCartItem(cartItem.id)}
                   >
                     <RemoveSharpIcon />
                   </IconButton>
@@ -112,6 +113,7 @@ export const CartItem = (props) => {
                         bgcolor: "#c73f6d",
                       },
                     }}
+                    onClick={() => addProductsToCart(cartItem)}
                   >
                     <AddSharpIcon />
                   </IconButton>
