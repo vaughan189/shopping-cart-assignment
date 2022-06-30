@@ -1,7 +1,7 @@
 import React from "react";
 
 import { BrowserRouter as Router } from "react-router-dom";
-// import { Footer } from "./components/Footer";
+import { Footer } from "./components/Footer";
 import { Header } from "./components/Header";
 
 import { Routes } from "./routes";
@@ -14,7 +14,7 @@ function App() {
         <div>
           <Routes />
         </div>
-        {/* <Footer /> */}
+        <Footer />
       </React.StrictMode>
     </Router>
   );
