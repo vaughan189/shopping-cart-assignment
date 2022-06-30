@@ -17,17 +17,23 @@ import {
 } from "../../constants/validation";
 import { useHistory } from "react-router-dom";
 
-export const Login = () => {
+export const Register = () => {
   let history = useHistory();
   const {
     register,
     handleSubmit,
+    watch,
+    getValues,
     formState: { errors },
   } = useForm();
+
+  const { password, confirmPassword } = getValues();
 
   const onSubmit = (data) => {
     history.push("/home");
   };
+
+  console.log(errors);
 
   return (
     <Container maxWidth="xl">
@@ -49,7 +55,7 @@ export const Login = () => {
                   justifyContent: "centre",
                 }}
               >
-                Login
+                Signup
               </Typography>
             </Grid>
             <Grid item xs={12} sm={12} md={12} xl={12}>
@@ -60,7 +66,7 @@ export const Login = () => {
                   fontWeight: 400,
                 }}
               >
-                Get access to your Orders. Wishlist and Recommendation
+                We do not share your personal details with anyone
               </Typography>
             </Grid>
           </Grid>
@@ -72,6 +78,58 @@ export const Login = () => {
             justifyContent="flex-start"
             alignItems="flex-start"
           >
+            <Grid item xs={12} sm={12} md={12} xl={12}>
+              <FormControl
+                variant="standard"
+                sx={{
+                  width: { xl: "100%", md: "100%", sm: "90%", xs: "90%" },
+                  margin: 2,
+                }}
+              >
+                <InputLabel htmlFor="firstName">First Name</InputLabel>
+                <Input
+                  id="firstName"
+                  type="text"
+                  {...register("firstName", {
+                    required: true,
+                  })}
+                />
+                {errors.email && (
+                  <FormHelperText
+                    id="component-error-text"
+                    sx={{ color: "red" }}
+                  >
+                    Please enter a first Name
+                  </FormHelperText>
+                )}
+              </FormControl>
+            </Grid>
+            <Grid item xs={12} sm={12} md={12} xl={12}>
+              <FormControl
+                variant="standard"
+                sx={{
+                  width: { xl: "100%", md: "100%", sm: "90%", xs: "90%" },
+                  margin: 2,
+                }}
+              >
+                <InputLabel htmlFor="lastName">Last Name</InputLabel>
+                <Input
+                  id="lastName"
+                  type="text"
+                  {...register("lastName", {
+                    required: true,
+                  })}
+                />
+                {errors.email && (
+                  <FormHelperText
+                    id="component-error-text"
+                    sx={{ color: "red" }}
+                  >
+                    Please enter a last name
+                  </FormHelperText>
+                )}
+              </FormControl>
+            </Grid>
             <Grid item xs={12} sm={12} md={12} xl={12}>
               <FormControl
                 variant="standard"
@@ -94,7 +152,7 @@ export const Login = () => {
                     id="component-error-text"
                     sx={{ color: "red" }}
                   >
-                    Please enter a valid email
+                    Please enter a valid the email
                   </FormHelperText>
                 )}
               </FormControl>
@@ -112,8 +170,11 @@ export const Login = () => {
                   id="password"
                   type="password"
                   {...register("password", {
-                    required: true,
-                    minLength: 6,
+                    required: "Please enter a valid password",
+                    minLength: {
+                      value: 6,
+                      message: "Password must have at least 6 characters",
+                    },
                     pattern: passwordRegexPattern,
                   })}
                 />
@@ -122,7 +183,44 @@ export const Login = () => {
                     id="component-error-text"
                     sx={{ color: "red" }}
                   >
-                    Please enter a valid password
+                    {errors.password.message}
+                  </FormHelperText>
+                )}
+              </FormControl>
+            </Grid>
+            <Grid item xs={12} sm={12} md={12} xl={12}>
+              <FormControl
+                variant="standard"
+                sx={{
+                  width: { xl: "100%", md: "100%", sm: "90%", xs: "90%" },
+                  margin: 2,
+                }}
+              >
+                <InputLabel htmlFor="confirmPassword">
+                  Confirm Password
+                </InputLabel>
+                <Input
+                  id="confirmPassword"
+                  type="password"
+                  {...register("confirmPassword", {
+                    required: "Please enter a valid password",
+                    minLength: {
+                      value: 6,
+                      message: "Password must have at least 6 characters",
+                    },
+                    pattern: passwordRegexPattern,
+                    validate: (value) => {
+                      const { password } = getValues();
+                      return password === value || "Passwords should match!";
+                    },
+                  })}
+                />
+                {errors.confirmPassword && (
+                  <FormHelperText
+                    id="component-error-text"
+                    sx={{ color: "red" }}
+                  >
+                    {errors.confirmPassword.message}
                   </FormHelperText>
                 )}
               </FormControl>
