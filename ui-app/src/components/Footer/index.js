@@ -6,20 +6,18 @@ export const Footer = () => {
     <Typography
       sx={{
         color: "#000000",
-        position: "fixed",
-        bottom: " 0px",
         width: "100%",
         height: "5%",
-        backgroundColor: "#bebdbd",
+        backgroundColor: "#ececec",
       }}
     >
       <Box
         sx={{
-          marginLeft: "16%",
+          marginLeft: "18%",
           padding: "16px",
         }}
       >
-        <Typography>
+        <Typography sx={{ fontFamily: "Dosis" }}>
           Copyright © 201-2018 Sabka Bazaar Grocery Supplies Pvt Ltd
         </Typography>
       </Box>
