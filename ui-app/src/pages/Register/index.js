@@ -22,12 +22,9 @@ export const Register = () => {
   const {
     register,
     handleSubmit,
-    watch,
     getValues,
     formState: { errors },
   } = useForm();
-
-  const { password, confirmPassword } = getValues();
 
   const onSubmit = (data) => {
     history.push("/home");
