@@ -30,8 +30,6 @@ export const Register = () => {
     history.push("/home");
   };
 
-  console.log(errors);
-
   return (
     <Container maxWidth="xl">
       <Grid container direction="row" spacing={10} sx={{ marginTop: "0%" }}>

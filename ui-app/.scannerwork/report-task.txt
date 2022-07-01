@@ -2,5 +2,5 @@ projectKey=Shopping-cart-frontend
 serverUrl=http://localhost:9000
 serverVersion=9.5.0.56709
 dashboardUrl=http://localhost:9000/dashboard?id=Shopping-cart-frontend
-ceTaskId=AYGuX78EnMQNUEwEN3C6
-ceTaskUrl=http://localhost:9000/api/ce/task?id=AYGuX78EnMQNUEwEN3C6
+ceTaskId=AYG4RrzxnMQNUEwEN3C8
+ceTaskUrl=http://localhost:9000/api/ce/task?id=AYG4RrzxnMQNUEwEN3C8

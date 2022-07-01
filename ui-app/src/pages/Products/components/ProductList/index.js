@@ -15,7 +15,11 @@ export const ProductList = (props) => {
       <Grid container direction="row" spacing={2}>
         {productsData.map((item) => {
           return (
-            <ProductItem item={item} addProductsToCart={addProductsToCart} />
+            <ProductItem
+              key={item.id}
+              item={item}
+              addProductsToCart={addProductsToCart}
+            />
           );
         })}
       </Grid>
