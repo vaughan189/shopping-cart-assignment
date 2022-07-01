@@ -26,7 +26,7 @@ export const Register = () => {
     formState: { errors },
   } = useForm();
 
-  const onSubmit = (data) => {
+  const onSubmit = () => {
     history.push("/home");
   };
 
@@ -206,7 +206,8 @@ export const Register = () => {
                     pattern: passwordRegexPattern,
                     validate: (value) => {
                       const { password } = getValues();
-                      return password === value || "Passwords should match!";
+                      if (password !== value) return "Passwords should match!";
+                      return "";
                     },
                   })}
                 />

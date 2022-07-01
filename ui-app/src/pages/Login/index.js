@@ -25,7 +25,7 @@ export const Login = () => {
     formState: { errors },
   } = useForm();
 
-  const onSubmit = (data) => {
+  const onSubmit = () => {
     history.push("/home");
   };
 

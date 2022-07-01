@@ -65,7 +65,7 @@ export const Header = () => {
     <AppBar
       position="sticky"
       style={{ backgroundColor: "#FFFFFF", height: "10%" }}
-      sx={{ zIndex: (theme) => theme.zIndex.drawer + 1 }}
+      sx={{ zIndex: (thm) => thm.zIndex.drawer + 1 }}
     >
       <Container maxWidth="xl">
         <Toolbar disableGutters>
