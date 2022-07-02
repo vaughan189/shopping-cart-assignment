@@ -1,12 +1,12 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import React, { useEffect, useState } from "react";
 import {
-  Box,
   Container,
   FormControl,
   Grid,
   MenuItem,
   Select,
+  Typography,
 } from "@mui/material";
 
 import { Sidebar } from "../../components/Sidebar";
@@ -83,10 +83,11 @@ export const Products = () => {
   }, [filterSelection]);
 
   return (
-    <Box component="main" sx={{ marginTop: "2%" }}>
+    <Typography component="main" sx={{ marginTop: "1%" }}>
       <Container maxWidth="xl">
         <Grid container direction="row" justifyContent="flex-start">
-          <Box
+          <Typography
+            component={"div"}
             sx={{
               marginTop: 2,
               marginBottom: 2,
@@ -118,23 +119,20 @@ export const Products = () => {
                   })}
               </Select>
             </FormControl>
-          </Box>
-          <Box
-            sx={{
-              display: { xs: "none", sm: "contents" },
-            }}
+          </Typography>
+          <Typography
+            component={"div"}
+            sx={{ display: { xs: "none", sm: "contents" } }}
           >
-            <Grid item xs={2} sm={2} md={2} xl={2}>
+            <Grid item xs={"auto"} sm={2} md={2} xl={2}>
               {!categoriesDataLoader && (
-                <Grid container direction="column">
-                  <Sidebar
-                    categoriesData={categoriesData.data}
-                    handleCategorySelection={handleCategorySelection}
-                  />
-                </Grid>
+                <Sidebar
+                  categoriesData={categoriesData.data}
+                  handleCategorySelection={handleCategorySelection}
+                />
               )}
             </Grid>
-          </Box>
+          </Typography>
           <Grid item xs={12} sm={10} md={10} xl={10}>
             {!productsDataLoader && (
               <Grid container direction="column">
@@ -147,6 +145,6 @@ export const Products = () => {
           </Grid>
         </Grid>
       </Container>
-    </Box>
+    </Typography>
   );
 };

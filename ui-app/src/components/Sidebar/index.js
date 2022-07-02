@@ -1,10 +1,5 @@
 import React from "react";
-import { Divider, Drawer } from "@mui/material";
-import Toolbar from "@mui/material/Toolbar";
-import List from "@mui/material/List";
-import ListItem from "@mui/material/ListItem";
-import ListItemButton from "@mui/material/ListItemButton";
-import ListItemText from "@mui/material/ListItemText";
+import { Divider, Grid, Typography } from "@mui/material";
 
 import "./index.scss";
 import { Box } from "@mui/system";
@@ -13,23 +8,28 @@ export const Sidebar = (props) => {
   const { categoriesData, handleCategorySelection } = props;
 
   return (
-    <Drawer variant="permanent">
-      <Toolbar />
-      <List>
-        {categoriesData.map((item) => (
-          <Box key={item.id}>
-            <ListItem key={item.id}>
-              <ListItemButton onClick={() => handleCategorySelection(item.id)}>
-                <ListItemText
-                  sx={{ fontFamily: "Dosis" }}
-                  primary={item.name}
-                />
-              </ListItemButton>
-            </ListItem>
-            <Divider />
-          </Box>
-        ))}
-      </List>
-    </Drawer>
+    <Box
+      component={"div"}
+      className="sidebar"
+      sx={{ position: "sticky", top: "1rem", height: "100%", width: "100%" }}
+    >
+      <Grid container direction="column">
+        <Grid item xs={12} sm={12} md={12} xl={12}>
+          <Typography component={"div"} sx={{ fontFamily: "Dosis" }}>
+            {categoriesData.map((item) => (
+              <Typography key={item.id}>
+                <Typography
+                  component={"a"}
+                  onClick={() => handleCategorySelection(item.id)}
+                >
+                  {item.name}
+                </Typography>
+                <Divider />
+              </Typography>
+            ))}
+          </Typography>
+        </Grid>
+      </Grid>
+    </Box>
   );
 };

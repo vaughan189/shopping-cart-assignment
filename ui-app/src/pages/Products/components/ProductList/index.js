@@ -7,6 +7,7 @@ export const ProductList = (props) => {
   const { productsData, addProductsToCart } = props;
   return (
     <Box
+      component={"div"}
       sx={{
         paddingLeft: { xl: "30px", md: "40px", sm: "0px", xs: "0px" },
         paddingBottom: "20px",
