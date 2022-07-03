@@ -49,7 +49,6 @@ export const Header = () => {
   const handleClick = (event) => {
     if (screenIsSM || screenIsXS) {
       history.push("/cart");
-      return;
     } else setAnchorEl(event.currentTarget);
   };
 
