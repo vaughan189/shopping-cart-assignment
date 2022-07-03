@@ -1,5 +1,5 @@
 import React from "react";
-import { Divider, Grid, Typography } from "@mui/material";
+import { Button, Divider, Grid, Typography } from "@mui/material";
 
 import "./index.scss";
 import { Box } from "@mui/system";
@@ -28,7 +28,9 @@ export const Sidebar = (props) => {
                   component={"a"}
                   onClick={() => handleCategorySelection(item.id)}
                 >
-                  {item.name}
+                  <Button variant="text" color="secondary" disableElevation>
+                    {item.name}
+                  </Button>
                 </Typography>
                 <Divider />
               </Typography>
