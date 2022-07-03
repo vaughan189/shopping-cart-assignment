@@ -13,6 +13,7 @@ import { Sidebar } from "../../components/Sidebar";
 import useAxios from "../../api/useAxios";
 import { ProductList } from "./components/ProductList";
 import useCart from "../../hooks/useCart";
+import { CATEGORIES, PRODUCTS } from "../../constants/endpoints";
 
 export const Products = () => {
   const [filterSelection, setFilterSelection] = useState("");
@@ -36,7 +37,7 @@ export const Products = () => {
   const getProductsList = () => {
     fetchProductsData({
       method: "GET",
-      url: "http://localhost:3000/products",
+      url: `${process.env.REACT_APP_SERVER_BASE_URL}${PRODUCTS}`,
       headers: {
         accept: "*/*",
       },
@@ -46,7 +47,7 @@ export const Products = () => {
   const getCategoriesList = () => {
     fetchCategoriesData({
       method: "GET",
-      url: "http://localhost:3000/categories",
+      url: `${process.env.REACT_APP_SERVER_BASE_URL}${CATEGORIES}`,
       headers: {
         accept: "*/*",
       },

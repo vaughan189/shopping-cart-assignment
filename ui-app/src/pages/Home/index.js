@@ -4,6 +4,7 @@ import React, { useEffect } from "react";
 import useAxios from "../../api/useAxios";
 import { Carousal } from "../../components/Carousel";
 import { Categories } from "../../components/Categories";
+import { BANNERS, CATEGORIES } from "../../constants/endpoints";
 
 const Home = () => {
   const {
@@ -23,7 +24,7 @@ const Home = () => {
   const getBanners = () => {
     fetchBannerData({
       method: "GET",
-      url: "http://localhost:3000/banners",
+      url: `${process.env.REACT_APP_SERVER_BASE_URL}${BANNERS}`,
       headers: {
         accept: "*/*",
       },
@@ -33,7 +34,7 @@ const Home = () => {
   const getCategories = () => {
     fetchCategories({
       method: "GET",
-      url: "http://localhost:3000/categories",
+      url: `${process.env.REACT_APP_SERVER_BASE_URL}${CATEGORIES}`,
       headers: {
         accept: "*/*",
       },

@@ -1,6 +1,7 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import { useEffect, useState } from "react";
 import useAxios from "../api/useAxios";
+import { ADD_TO_CART } from "../constants/endpoints";
 import { cartService } from "../services";
 import { formatCartData } from "../utils/cart";
 
@@ -27,7 +28,7 @@ const useCart = () => {
   const getCartProducts = () => {
     fetchCartProducts({
       method: "GET",
-      url: "http://localhost:3000/addToCart",
+      url: `${process.env.REACT_APP_SERVER_BASE_URL}${ADD_TO_CART}`,
 
       headers: {
         accept: "*/*",
@@ -38,7 +39,7 @@ const useCart = () => {
   const deleteCartItem = (id) => {
     deleteCartProduct({
       method: "DELETE",
-      url: `http://localhost:3000/addToCart/${id}`,
+      url: `${process.env.REACT_APP_SERVER_BASE_URL}${ADD_TO_CART}/${id}`,
       headers: {
         accept: "*/*",
       },
@@ -48,7 +49,7 @@ const useCart = () => {
   const addProductsToCart = (item) => {
     addProducts({
       method: "POST",
-      url: "http://localhost:3000/addToCart",
+      url: `${process.env.REACT_APP_SERVER_BASE_URL}${ADD_TO_CART}`,
 
       headers: {
         accept: "*/*",
