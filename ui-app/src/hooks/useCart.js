@@ -1,6 +1,7 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import { useEffect, useState } from "react";
 import useAxios from "../api/useAxios";
+import { cartService } from "../services";
 import { formatCartData } from "../utils/cart";
 
 const useCart = () => {
@@ -64,6 +65,7 @@ const useCart = () => {
 
   useEffect(() => {
     getCartProducts();
+    cartService.sendCartData("Cart has been updated");
   }, [deleteCartProductData, addProductData]);
 
   useEffect(() => {

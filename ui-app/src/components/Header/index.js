@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+/* eslint-disable react-hooks/exhaustive-deps */
+import React, { useEffect, useState } from "react";
 import { useHistory } from "react-router-dom";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
@@ -20,6 +21,8 @@ import {
 import { useTheme } from "@emotion/react";
 import useCart from "../../hooks/useCart";
 
+import { cartService } from "../../services";
+
 const routes = [
   {
     id: 1,
@@ -39,7 +42,7 @@ export const Header = () => {
   const screenIsSM = useMediaQuery(theme.breakpoints.only("sm"));
   const screenIsXS = useMediaQuery(theme.breakpoints.only("xs"));
 
-  const { cartProductsData } = useCart();
+  const { cartProductsData, getCartProducts } = useCart();
 
   const [anchorEl, setAnchorEl] = useState(null);
 
@@ -60,6 +63,18 @@ export const Header = () => {
   const redirectToPage = (path) => {
     history.push(path);
   };
+
+  useEffect(() => {
+    const subscription = cartService.getCartData().subscribe((data) => {
+      console.log(data);
+      if (data) {
+        getCartProducts();
+      }
+    });
+    return () => {
+      subscription.unsubscribe();
+    };
+  }, []);
 
   return (
     <AppBar
@@ -199,12 +214,10 @@ export const Header = () => {
                         style: {
                           width: "30%",
                           height: "80%",
-                          // height: "calc(100vh - 140px)",
                           padding: 0,
                           margin: 0,
                           backgroundColor: "#efefef",
                           zIndex: "inherit",
-                          // overflow: "hidden"
                         },
                       }}
                     >
