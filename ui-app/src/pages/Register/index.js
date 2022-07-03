@@ -89,7 +89,7 @@ export const Register = () => {
                     required: true,
                   })}
                 />
-                {errors.email && (
+                {errors.firstName && (
                   <FormHelperText
                     id="component-error-text"
                     sx={{ color: "red" }}
@@ -115,7 +115,7 @@ export const Register = () => {
                     required: true,
                   })}
                 />
-                {errors.email && (
+                {errors.lastName && (
                   <FormHelperText
                     id="component-error-text"
                     sx={{ color: "red" }}
@@ -206,8 +206,7 @@ export const Register = () => {
                     pattern: passwordRegexPattern,
                     validate: (value) => {
                       const { password } = getValues();
-                      if (password !== value) return "Passwords should match!";
-                      return "";
+                      return (password === value) | "Passwords should match!";
                     },
                   })}
                 />

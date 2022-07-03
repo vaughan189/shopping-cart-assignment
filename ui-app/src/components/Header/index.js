@@ -65,7 +65,6 @@ export const Header = () => {
 
   useEffect(() => {
     const subscription = cartService.getCartData().subscribe((data) => {
-      console.log(data);
       if (data) {
         getCartProducts();
       }
