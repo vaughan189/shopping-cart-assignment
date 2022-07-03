@@ -89,6 +89,10 @@ export const Header = () => {
               <img
                 src={require("../../assets/logo.png")}
                 alt="Sabka Bazaar Logo"
+                onClick={() => {
+                  history.push("/home");
+                }}
+                style={{ cursor: "pointer" }}
               />
             </Grid>
             <Grid item xl={6} md={6} sm={6} xs="auto">
