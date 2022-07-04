@@ -16,7 +16,7 @@ import { ProductList } from "./components/ProductList";
 import useCart from "../../hooks/useCart";
 import { CATEGORIES, PRODUCTS } from "../../constants/endpoints";
 
-export const Products = () => {
+const Products = () => {
   const [filterSelection, setFilterSelection] = useState("");
   const [productsList, setProductsList] = useState([]);
   const [filteredProductsList, setFilteredProductsList] = useState([]);
@@ -67,7 +67,7 @@ export const Products = () => {
 
   useEffect(() => {
     if (
-      !productsDataLoader &&
+      productsData &&
       Array.isArray(productsData.data) &&
       productsData.data.length > 0
     ) {
@@ -85,7 +85,7 @@ export const Products = () => {
   }, [filterSelection]);
 
   return (
-    <Typography component="main" sx={{ marginTop: "1%" }}>
+    <Typography component="div" sx={{ marginTop: "1%" }}>
       <Container maxWidth="xl">
         <Grid container direction="row" justifyContent="flex-start">
           <Typography
@@ -151,3 +151,5 @@ export const Products = () => {
     </Typography>
   );
 };
+
+export default Products;

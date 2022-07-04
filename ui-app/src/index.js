@@ -1,5 +1,5 @@
 import React from "react";
-import ReactDOM from "react-dom/client";
+import ReactDOM from "react-dom";
 import "./index.scss";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
@@ -7,11 +7,11 @@ import { ThemeProvider } from "@mui/material";
 
 import { theme } from "./theme";
 
-const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(
+// const root = ReactDOM.createRoot();
+ReactDOM.render(
   <ThemeProvider theme={theme}>
     <App />
-  </ThemeProvider>
+  </ThemeProvider>,document.getElementById("root")
 );
 
 // If you want to start measuring performance in your app, pass a function

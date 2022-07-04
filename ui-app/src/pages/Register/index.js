@@ -17,7 +17,7 @@ import {
 } from "../../constants/validation";
 import { useHistory } from "react-router-dom";
 
-export const Register = () => {
+const Register = () => {
   let history = useHistory();
   const {
     register,
@@ -241,3 +241,5 @@ export const Register = () => {
     </Container>
   );
 };
+
+export default Register

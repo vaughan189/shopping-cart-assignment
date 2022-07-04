@@ -10,14 +10,12 @@ const Home = () => {
   const {
     response: bannerData,
     loading: bannerDataLoader,
-    // error: bannerDataError,
     fetchData: fetchBannerData,
   } = useAxios();
 
   const {
     response: categoriesData,
     loading: categoriesDataLoader,
-    // error: categoriesDataError,
     fetchData: fetchCategories,
   } = useAxios();
 

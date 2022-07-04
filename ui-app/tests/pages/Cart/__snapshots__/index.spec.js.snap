@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Cart Page should render the Cart Page correctly 1`] = `
+<ForwardRef(Box)
+  sx={
+    Object {
+      "backgroundColor": "#efefef",
+      "margin": 0,
+      "padding": 0,
+      "zIndex": "inherit",
+    }
+  }
+>
+  <Cart />
+  ;
+</ForwardRef(Box)>
+`;

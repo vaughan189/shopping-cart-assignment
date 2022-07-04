@@ -1,0 +1,90 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Products Page should render the Products Page correctly 1`] = `
+<ForwardRef(Typography)
+  component="div"
+  sx={
+    Object {
+      "marginTop": "1%",
+    }
+  }
+>
+  <ForwardRef(Container)
+    maxWidth="xl"
+  >
+    <ForwardRef(Grid)
+      container={true}
+      direction="row"
+      justifyContent="flex-start"
+    >
+      <ForwardRef(Typography)
+        component="div"
+        sx={
+          Object {
+            "display": Object {
+              "sm": "none",
+              "xs": "contents",
+            },
+            "marginBottom": 2,
+            "marginTop": 2,
+          }
+        }
+      >
+        <ForwardRef(FormControl)
+          fullWidth={true}
+        >
+          <ForwardRef(InputLabel)
+            htmlFor="categories-menu"
+          >
+            Select Category
+          </ForwardRef(InputLabel)>
+          <ForwardRef(Select)
+            MenuProps={Object {}}
+            id="categories-menu"
+            sx={
+              Object {
+                "backgroundColor": "#c73f6d",
+                "color": "#FFFFFF",
+              }
+            }
+            value=""
+          >
+            <ForwardRef(MenuItem)
+              onClick={[Function]}
+              value=""
+            >
+              Select Category
+            </ForwardRef(MenuItem)>
+          </ForwardRef(Select)>
+        </ForwardRef(FormControl)>
+      </ForwardRef(Typography)>
+      <ForwardRef(Typography)
+        component="div"
+        sx={
+          Object {
+            "display": Object {
+              "sm": "contents",
+              "xs": "none",
+            },
+          }
+        }
+      >
+        <ForwardRef(Grid)
+          item={true}
+          md={2}
+          sm={2}
+          xl={2}
+          xs="auto"
+        />
+      </ForwardRef(Typography)>
+      <ForwardRef(Grid)
+        item={true}
+        md={10}
+        sm={10}
+        xl={10}
+        xs={12}
+      />
+    </ForwardRef(Grid)>
+  </ForwardRef(Container)>
+</ForwardRef(Typography)>
+`;

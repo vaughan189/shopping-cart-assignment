@@ -17,7 +17,7 @@ import {
 } from "../../constants/validation";
 import { useHistory } from "react-router-dom";
 
-export const Login = () => {
+const Login = () => {
   let history = useHistory();
   const {
     register,
@@ -129,6 +129,7 @@ export const Login = () => {
             </Grid>
             <Grid item xs={12} md={12}>
               <Button
+                id="login-btn"
                 variant="contained"
                 sx={{
                   width: { xl: "100%", md: "100%", sm: "90%", xs: "90%" },
@@ -148,3 +149,5 @@ export const Login = () => {
     </Container>
   );
 };
+
+export default Login;

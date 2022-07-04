@@ -1,0 +1,191 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Login Page should render the Login Page correctly 1`] = `
+<ForwardRef(Container)
+  maxWidth="xl"
+>
+  <ForwardRef(Grid)
+    container={true}
+    direction="row"
+    spacing={10}
+    sx={
+      Object {
+        "marginTop": "0%",
+      }
+    }
+  >
+    <ForwardRef(Grid)
+      item={true}
+      md={2}
+      sm="auto"
+      xl={2}
+      xs="auto"
+    />
+    <ForwardRef(Grid)
+      item={true}
+      md={4}
+      sm={12}
+      xl={4}
+      xs={12}
+    >
+      <ForwardRef(Grid)
+        alignItems="flex-start"
+        container={true}
+        direction="row"
+        justifyContent="flex-start"
+      >
+        <ForwardRef(Grid)
+          item={true}
+          md={12}
+          sm={12}
+          xl={12}
+          xs={12}
+        >
+          <ForwardRef(Typography)
+            sx={
+              Object {
+                "fontFamily": "Dosis",
+                "fontSize": 28,
+                "fontWeight": 600,
+                "justifyContent": "centre",
+              }
+            }
+          >
+            Login
+          </ForwardRef(Typography)>
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
+          item={true}
+          md={12}
+          sm={12}
+          xl={12}
+          xs={12}
+        >
+          <ForwardRef(Typography)
+            sx={
+              Object {
+                "fontFamily": "Dosis",
+                "fontSize": 18,
+                "fontWeight": 400,
+              }
+            }
+          >
+            Get access to your Orders. Wishlist and Recommendation
+          </ForwardRef(Typography)>
+        </ForwardRef(Grid)>
+      </ForwardRef(Grid)>
+    </ForwardRef(Grid)>
+    <ForwardRef(Grid)
+      item={true}
+      md={4}
+      sm={12}
+      xl={4}
+      xs={12}
+    >
+      <ForwardRef(Grid)
+        alignItems="flex-start"
+        container={true}
+        direction="row"
+        justifyContent="flex-start"
+      >
+        <ForwardRef(Grid)
+          item={true}
+          md={12}
+          sm={12}
+          xl={12}
+          xs={12}
+        >
+          <ForwardRef(FormControl)
+            sx={
+              Object {
+                "margin": 2,
+                "width": Object {
+                  "md": "100%",
+                  "sm": "90%",
+                  "xl": "100%",
+                  "xs": "90%",
+                },
+              }
+            }
+            variant="standard"
+          >
+            <ForwardRef(InputLabel)
+              htmlFor="email"
+            >
+              Email
+            </ForwardRef(InputLabel)>
+            <ForwardRef(Input)
+              id="email"
+              name="email"
+              onBlur={[Function]}
+              onChange={[Function]}
+              type="text"
+            />
+          </ForwardRef(FormControl)>
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
+          item={true}
+          md={12}
+          sm={12}
+          xl={12}
+          xs={12}
+        >
+          <ForwardRef(FormControl)
+            sx={
+              Object {
+                "margin": 2,
+                "width": Object {
+                  "md": "100%",
+                  "sm": "90%",
+                  "xl": "100%",
+                  "xs": "90%",
+                },
+              }
+            }
+            variant="standard"
+          >
+            <ForwardRef(InputLabel)
+              htmlFor="password"
+            >
+              Password
+            </ForwardRef(InputLabel)>
+            <ForwardRef(Input)
+              id="password"
+              name="password"
+              onBlur={[Function]}
+              onChange={[Function]}
+              type="password"
+            />
+          </ForwardRef(FormControl)>
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
+          item={true}
+          md={12}
+          xs={12}
+        >
+          <ForwardRef(Button)
+            id="login-btn"
+            onClick={[Function]}
+            sx={
+              Object {
+                "fontFamily": "Dosis",
+                "margin": 2,
+                "textTransform": "none",
+                "width": Object {
+                  "md": "100%",
+                  "sm": "90%",
+                  "xl": "100%",
+                  "xs": "90%",
+                },
+              }
+            }
+            variant="contained"
+          >
+            Login
+          </ForwardRef(Button)>
+        </ForwardRef(Grid)>
+      </ForwardRef(Grid)>
+    </ForwardRef(Grid)>
+  </ForwardRef(Grid)>
+</ForwardRef(Container)>
+`;

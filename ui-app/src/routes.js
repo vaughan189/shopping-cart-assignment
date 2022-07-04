@@ -4,9 +4,9 @@ import { Route, Switch } from "react-router-dom";
 import Home from "./pages/Home";
 import Cart from "./pages/Cart";
 import NotFound from "./pages/NotFound";
-import { Products } from "./pages/Products";
-import { Login } from "./pages/Login";
-import { Register } from "./pages/Register";
+import Products from "./pages/Products";
+import Login from "./pages/Login";
+import Register from "./pages/Register";
 
 export const Routes = () => {
   return (

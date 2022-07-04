@@ -5,21 +5,16 @@ import { ProductItem } from "../ProductItem";
 
 export const ProductList = (props) => {
   const { productsData, addProductsToCart } = props;
-  return (
-    <Box
-      component={"div"}
-      sx={{
-        paddingLeft: { xl: "30px", md: "40px", sm: "0px", xs: "0px" },
-        paddingBottom: "4%",
-      }}
-    >
+
+  if (productsData.length === 0)
+    return (
       <Grid container direction="row" spacing={2}>
-        {productsData.length === 0 && (
+        <Grid item xl={12} md={12} sm={12} xs={12}>
           <Box
             sx={{
-              marginLeft: "auto",
+              marginLeft: "2%",
               marginTop: "2%",
-              width:"100%"
+              width: "100%",
             }}
           >
             <Alert
@@ -38,7 +33,19 @@ export const ProductList = (props) => {
               No data found
             </Alert>
           </Box>
-        )}
+        </Grid>
+      </Grid>
+    );
+
+  return (
+    <Box
+      component={"div"}
+      sx={{
+        paddingLeft: { xl: "30px", md: "40px", sm: "0px", xs: "0px" },
+        paddingBottom: "4%",
+      }}
+    >
+      <Grid container direction="row" spacing={2}>
         {productsData.map((item) => {
           return (
             <ProductItem
