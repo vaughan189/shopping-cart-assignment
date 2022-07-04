@@ -4,6 +4,7 @@ import {
   Container,
   FormControl,
   Grid,
+  InputLabel,
   MenuItem,
   Select,
   Typography,
@@ -96,8 +97,9 @@ export const Products = () => {
             }}
           >
             <FormControl fullWidth>
+              <InputLabel htmlFor="categories-menu">Select Category</InputLabel>
               <Select
-                id="demo-simple-select"
+                id="categories-menu"
                 sx={{ color: "#FFFFFF", backgroundColor: "#c73f6d" }}
                 value={filterSelection}
                 MenuProps={{}}
