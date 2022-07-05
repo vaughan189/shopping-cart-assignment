@@ -78,6 +78,7 @@ export const CartItem = (props) => {
                   }}
                 >
                   <IconButton
+                    id="subtract-Cart-Item"
                     aria-label="subtract"
                     size="small"
                     sx={{
@@ -101,6 +102,7 @@ export const CartItem = (props) => {
                     {cartItem.quantity}
                   </Typography>
                   <IconButton
+                    id="add-Cart-Item"
                     aria-label="add"
                     size="small"
                     sx={{

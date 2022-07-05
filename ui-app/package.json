@@ -51,7 +51,9 @@
     "enzyme": "^3.11.0",
     "enzyme-to-json": "^3.6.2",
     "jest": "^28.1.2",
-    "jest-enzyme": "^7.1.2"
+    "jest-enzyme": "^7.1.2",
+    "jsdom": "20.0.0",
+    "jsdom-global": "3.0.2"
   },
   "jest": {
     "moduleNameMapper": {
@@ -69,7 +71,9 @@
       "!src/index.js"
     ],
     "coverageReporters": [
-      "json", "lcov", "text"
+      "json",
+      "lcov",
+      "text"
     ],
     "coverageDirectory": "coverage",
     "testPathIgnorePatterns": [

@@ -23,7 +23,7 @@ export const Categories = (props) => {
   );
 };
 
-const CategoriesItem = (props) => {
+export const CategoriesItem = (props) => {
   let history = useHistory();
   const { name, description, imageUrl, position } = props;
   return (
@@ -67,6 +67,7 @@ const CategoriesItem = (props) => {
                 </Grid>
                 <Grid item xs={12} sm={12} md={12} xl={12}>
                   <Button
+                    id="left-explore-btn"
                     variant="contained"
                     color="primary"
                     style={{ textTransform: "none" }}
@@ -104,6 +105,7 @@ const CategoriesItem = (props) => {
                 </Grid>
                 <Grid item xs={12} sm={12} md={12} xl={12}>
                   <Button
+                    id="right-explore-btn"
                     variant="contained"
                     color="primary"
                     style={{ textTransform: "none" }}

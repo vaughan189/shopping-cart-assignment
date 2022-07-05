@@ -23,7 +23,7 @@ export const Carousal = (props) => {
   );
 };
 
-const CarouselItem = (props) => {
+export const CarouselItem = (props) => {
   const { bannerImageUrl, bannerImageAlt } = props;
   return (
     <Card>

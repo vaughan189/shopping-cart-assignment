@@ -18,6 +18,7 @@ export const Cart = () => {
     addProductsToCart,
     deleteCartItem,
   } = useCart();
+
   return (
     <Box
       sx={{
@@ -120,7 +121,7 @@ export const Cart = () => {
   );
 };
 
-const CartHeader = () => {
+export const CartHeader = () => {
   return (
     <Typography
       component="div"
@@ -159,7 +160,7 @@ const CartHeader = () => {
   );
 };
 
-const CheckOutSection = (props) => {
+export const CheckOutSection = (props) => {
   const { cartProductsData } = props;
   const [totalPrice, setTotalPrice] = useState(0);
 

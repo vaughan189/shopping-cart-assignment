@@ -1,0 +1,342 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Cart component should render the Cart Header component correctly 1`] = `
+<ForwardRef(Typography)
+  component="div"
+  sx={
+    Object {
+      "backgroundColor": Object {
+        "md": "#000000",
+        "sm": "#FFFFFF",
+        "xl": "#000000",
+        "xs": "#FFFFFF",
+      },
+      "color": Object {
+        "md": "#FFFFFF",
+        "sm": "#000000",
+        "xl": "#FFFFFF",
+        "xs": "#000000",
+      },
+      "fontFamily": "Dosis",
+      "fontSize": 18,
+      "fontWeight": "bold",
+      "height": "40px",
+      "paddingLeft": 2,
+      "paddingTop": 2,
+    }
+  }
+>
+  My Cart
+   
+  <ForwardRef(Typography)
+    component="span"
+    sx={
+      Object {
+        "fontFamily": "Dosis",
+        "fontSize": 16,
+      }
+    }
+  >
+    (1 item)
+  </ForwardRef(Typography)>
+</ForwardRef(Typography)>
+`;
+
+exports[`Cart component should render the Cart component correctly when api is loading 1`] = `
+<ForwardRef(Box)
+  sx={
+    Object {
+      "display": "flex",
+      "flexDirection": "column",
+      "fontFamily": "Dosis",
+    }
+  }
+>
+  <ForwardRef(Box)
+    sx={Object {}}
+  >
+    <CartHeader />
+  </ForwardRef(Box)>
+  <ForwardRef(Box)
+    sx={
+      Object {
+        "display": "flex",
+        "flexDirection": "column",
+        "fontFamily": "Dosis",
+        "height": "100%",
+        "justifyContent": "Centre",
+      }
+    }
+  >
+    <ForwardRef(Typography)
+      sx={
+        Object {
+          "display": "flex",
+          "flexDirection": "row",
+          "fontFamily": "Dosis",
+          "fontSize": 25,
+          "fontWeight": 600,
+          "justifyContent": "center",
+        }
+      }
+    >
+      No items in your cart
+    </ForwardRef(Typography)>
+    <ForwardRef(Typography)
+      sx={
+        Object {
+          "display": "flex",
+          "flexDirection": "row",
+          "fontFamily": "Dosis",
+          "fontSize": 18,
+          "fontWeight": 400,
+          "justifyContent": "center",
+        }
+      }
+    >
+      Your favourite items are just a click away
+    </ForwardRef(Typography)>
+    <ForwardRef(Button)
+      sx={
+        Object {
+          "alignItems": "center",
+          "display": "flex",
+          "flexDirection": "row",
+          "justifyContent": "centre",
+          "textDecoration": "none",
+        }
+      }
+      variant="contained"
+    >
+      Start Shopping
+    </ForwardRef(Button)>
+  </ForwardRef(Box)>
+</ForwardRef(Box)>
+`;
+
+exports[`Cart component should render the Cart component correctly when api returns data 1`] = `
+<ForwardRef(Box)
+  sx={
+    Object {
+      "display": "flex",
+      "flexDirection": "column",
+      "fontFamily": "Dosis",
+    }
+  }
+>
+  <ForwardRef(Box)
+    sx={Object {}}
+  >
+    <CartHeader />
+  </ForwardRef(Box)>
+  <ForwardRef(Box)
+    sx={
+      Object {
+        "display": "flex",
+        "flexDirection": "column",
+        "fontFamily": "Dosis",
+        "height": "100%",
+        "justifyContent": "Centre",
+      }
+    }
+  >
+    <ForwardRef(Typography)
+      sx={
+        Object {
+          "display": "flex",
+          "flexDirection": "row",
+          "fontFamily": "Dosis",
+          "fontSize": 25,
+          "fontWeight": 600,
+          "justifyContent": "center",
+        }
+      }
+    >
+      No items in your cart
+    </ForwardRef(Typography)>
+    <ForwardRef(Typography)
+      sx={
+        Object {
+          "display": "flex",
+          "flexDirection": "row",
+          "fontFamily": "Dosis",
+          "fontSize": 18,
+          "fontWeight": 400,
+          "justifyContent": "center",
+        }
+      }
+    >
+      Your favourite items are just a click away
+    </ForwardRef(Typography)>
+    <ForwardRef(Button)
+      sx={
+        Object {
+          "alignItems": "center",
+          "display": "flex",
+          "flexDirection": "row",
+          "justifyContent": "centre",
+          "textDecoration": "none",
+        }
+      }
+      variant="contained"
+    >
+      Start Shopping
+    </ForwardRef(Button)>
+  </ForwardRef(Box)>
+</ForwardRef(Box)>
+`;
+
+exports[`Cart component should render the Cart component correctly when api returns empty array 1`] = `
+<ForwardRef(Box)
+  sx={
+    Object {
+      "display": "flex",
+      "flexDirection": "column",
+      "fontFamily": "Dosis",
+    }
+  }
+>
+  <ForwardRef(Box)
+    sx={Object {}}
+  >
+    <CartHeader />
+  </ForwardRef(Box)>
+  <ForwardRef(Box)
+    sx={
+      Object {
+        "display": "flex",
+        "flexDirection": "column",
+        "fontFamily": "Dosis",
+        "height": "100%",
+        "justifyContent": "Centre",
+      }
+    }
+  >
+    <ForwardRef(Typography)
+      sx={
+        Object {
+          "display": "flex",
+          "flexDirection": "row",
+          "fontFamily": "Dosis",
+          "fontSize": 25,
+          "fontWeight": 600,
+          "justifyContent": "center",
+        }
+      }
+    >
+      No items in your cart
+    </ForwardRef(Typography)>
+    <ForwardRef(Typography)
+      sx={
+        Object {
+          "display": "flex",
+          "flexDirection": "row",
+          "fontFamily": "Dosis",
+          "fontSize": 18,
+          "fontWeight": 400,
+          "justifyContent": "center",
+        }
+      }
+    >
+      Your favourite items are just a click away
+    </ForwardRef(Typography)>
+    <ForwardRef(Button)
+      sx={
+        Object {
+          "alignItems": "center",
+          "display": "flex",
+          "flexDirection": "row",
+          "justifyContent": "centre",
+          "textDecoration": "none",
+        }
+      }
+      variant="contained"
+    >
+      Start Shopping
+    </ForwardRef(Button)>
+  </ForwardRef(Box)>
+</ForwardRef(Box)>
+`;
+
+exports[`Cart component should render the checkout section correctly 1`] = `
+<ForwardRef(Box)
+  sx={
+    Object {
+      "alignItems": "centre",
+      "backgroundColor": "white",
+      "bottom": 0,
+      "display": "flex",
+      "flexDirection": "column",
+      "justifyContent": "centre",
+      "padding": 2,
+    }
+  }
+>
+  <ForwardRef(Typography)
+    sx={
+      Object {
+        "display": "flex",
+        "flexDirection": "row",
+        "fontFamily": "Dosis",
+        "fontSize": 16,
+        "fontWeight": 600,
+        "justifyContent": "center",
+      }
+    }
+  >
+    Promo code can be applied on payment page
+  </ForwardRef(Typography)>
+  <ForwardRef(Button)
+    sx={
+      Object {
+        "alignItems": "center",
+        "display": "flex",
+        "flexDirection": "row",
+        "justifyContent": "space-between",
+      }
+    }
+    variant="contained"
+  >
+    <ForwardRef(Typography)
+      component="span"
+    >
+      Proceed to Checkout
+    </ForwardRef(Typography)>
+    <ForwardRef(Box)
+      sx={
+        Object {
+          "alignItems": "center",
+          "display": "flex",
+          "flexDirection": "row",
+          "justifyContent": "space-around",
+        }
+      }
+    >
+      <ForwardRef(Typography)
+        component="span"
+        sx={
+          Object {
+            "textTransform": "none",
+          }
+        }
+      >
+        Rs.
+      </ForwardRef(Typography)>
+      <ForwardRef(IconButton)
+        aria-label="delete"
+        color="secondary"
+        size="small"
+      >
+        <Memo(ForwardRef(ArrowForwardIosSharpIcon))
+          fontSize="inherit"
+          sx={
+            Object {
+              "color": "#FFFFFF",
+            }
+          }
+        />
+      </ForwardRef(IconButton)>
+    </ForwardRef(Box)>
+  </ForwardRef(Button)>
+</ForwardRef(Box)>
+`;
