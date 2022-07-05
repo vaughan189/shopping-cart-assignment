@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testExecutions version="1">
+  <file path="/Users/vaupo/Documents/Workspace/Work/Training/shopping-cart-assignment/ui-app/tests/pages/Login/index.spec.js">
+    <testCase name="Login Page should render the Login Page correctly" duration="142"/>
+  </file>
+  <file path="/Users/vaupo/Documents/Workspace/Work/Training/shopping-cart-assignment/ui-app/tests/pages/Register/index.spec.js">
+    <testCase name="Register Page should render the Register Page correctly" duration="148"/>
+  </file>
+  <file path="/Users/vaupo/Documents/Workspace/Work/Training/shopping-cart-assignment/ui-app/tests/components/LowestPrice/index.spec.js">
+    <testCase name="LowestPriceSection component should render the LowestPriceSection component correctly" duration="139"/>
+  </file>
+  <file path="/Users/vaupo/Documents/Workspace/Work/Training/shopping-cart-assignment/ui-app/tests/components/Categories/index.spec.js">
+    <testCase name="Categories component should render the Categories component correctly" duration="34"/>
+    <testCase name="Categories component should render the Categories Item component correctly for left position" duration="5"/>
+    <testCase name="Categories component should render the Categories Item component correctly for right position" duration="2"/>
+    <testCase name="Categories component should trigger the explore route function on clicking the left side button" duration="10"/>
+    <testCase name="Categories component should trigger the explore route function on clicking the right side button" duration="7"/>
+  </file>
+  <file path="/Users/vaupo/Documents/Workspace/Work/Training/shopping-cart-assignment/ui-app/tests/components/CartItem/index.spec.js">
+    <testCase name="CartItem component should render the CartItem component correctly" duration="142"/>
+    <testCase name="CartItem component should trigger the subtract item function on clicking the button" duration="5"/>
+    <testCase name="CartItem component should trigger the add item function on clicking the button" duration="1"/>
+  </file>
+  <file path="/Users/vaupo/Documents/Workspace/Work/Training/shopping-cart-assignment/ui-app/tests/components/Carousel/index.spec.js">
+    <testCase name="Carousel component should render the Carousel component correctly" duration="13"/>
+    <testCase name="Carousel component should render each CarouselItem component correctly" duration="2"/>
+  </file>
+  <file path="/Users/vaupo/Documents/Workspace/Work/Training/shopping-cart-assignment/ui-app/tests/pages/Home/index.spec.js">
+    <testCase name="Home Page should render the Home Page correctly" duration="17"/>
+  </file>
+  <file path="/Users/vaupo/Documents/Workspace/Work/Training/shopping-cart-assignment/ui-app/tests/pages/Cart/index.spec.js">
+    <testCase name="Cart Page should render the Cart Page correctly" duration="12"/>
+  </file>
+  <file path="/Users/vaupo/Documents/Workspace/Work/Training/shopping-cart-assignment/ui-app/tests/pages/Products/index.spec.js">
+    <testCase name="Products Page should render the Products Page correctly" duration="20"/>
+  </file>
+  <file path="/Users/vaupo/Documents/Workspace/Work/Training/shopping-cart-assignment/ui-app/tests/components/Cart/index.spec.js">
+    <testCase name="Cart component should render the Cart component correctly when api is loading" duration="16"/>
+    <testCase name="Cart component should render the Cart component correctly when api returns data" duration="2"/>
+    <testCase name="Cart component should render the Cart component correctly when api returns empty array" duration="2"/>
+    <testCase name="Cart component should render the checkout section correctly" duration="3"/>
+    <testCase name="Cart component should render the Cart Header component correctly" duration="2"/>
+  </file>
+  <file path="/Users/vaupo/Documents/Workspace/Work/Training/shopping-cart-assignment/ui-app/tests/index.spec.js">
+    <testCase name="App component should render the App component correctly" duration="9"/>
+  </file>
+  <file path="/Users/vaupo/Documents/Workspace/Work/Training/shopping-cart-assignment/ui-app/tests/pages/NotFound/index.spec.js">
+    <testCase name="NotFound Page should render the NotFound Page correctly" duration="6"/>
+  </file>
+  <file path="/Users/vaupo/Documents/Workspace/Work/Training/shopping-cart-assignment/ui-app/tests/components/Sidebar/index.spec.js">
+    <testCase name="Sidebar component should render the Sidebar component correctly" duration="10"/>
+  </file>
+  <file path="/Users/vaupo/Documents/Workspace/Work/Training/shopping-cart-assignment/ui-app/tests/components/Footer/index.spec.js">
+    <testCase name="Footer component should render the Footer component correctly" duration="7"/>
+  </file>
+</testExecutions>

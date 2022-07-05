@@ -1,0 +1,43 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Footer component should render the Footer component correctly 1`] = `
+<ForwardRef(Typography)
+  sx={
+    Object {
+      "backgroundColor": "#ececec",
+      "bottom": 0,
+      "color": "#000000",
+      "height": Object {
+        "md": "4%",
+        "sm": "4%",
+        "xl": "4%",
+      },
+      "position": "fixed",
+      "width": "100%",
+    }
+  }
+>
+  <ForwardRef(Box)
+    sx={
+      Object {
+        "marginLeft": Object {
+          "md": "35%",
+          "sm": "20%",
+          "xl": "40%",
+        },
+        "padding": "auto",
+      }
+    }
+  >
+    <ForwardRef(Typography)
+      sx={
+        Object {
+          "fontFamily": "Dosis",
+        }
+      }
+    >
+      Copyright © 201-2018 Sabka Bazaar Grocery Supplies Pvt Ltd
+    </ForwardRef(Typography)>
+  </ForwardRef(Box)>
+</ForwardRef(Typography)>
+`;

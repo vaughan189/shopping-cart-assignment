@@ -1,0 +1,98 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Sidebar component should render the Sidebar component correctly 1`] = `
+<ForwardRef(Box)
+  className="sidebar"
+  component="div"
+  sx={
+    Object {
+      "height": "100%",
+      "marginLeft": Object {
+        "md": 0,
+        "sm": "-24px",
+        "xl": 0,
+      },
+      "position": "fixed",
+      "top": Object {
+        "md": "7rem",
+        "sm": "5.5rem",
+        "xl": "7rem",
+      },
+      "width": Object {
+        "md": "200px",
+        "sm": "140px",
+        "xl": "260px",
+      },
+    }
+  }
+>
+  <ForwardRef(Grid)
+    container={true}
+    direction="column"
+  >
+    <ForwardRef(Grid)
+      item={true}
+      md={12}
+      sm={12}
+      xl={12}
+      xs={12}
+    >
+      <ForwardRef(Typography)
+        component="div"
+        sx={
+          Object {
+            "fontFamily": "Dosis",
+          }
+        }
+      >
+        <ForwardRef(Typography)
+          component="span"
+          key="5b675e5e5936635728f9fc30"
+          style={
+            Object {
+              "cursor": "pointer",
+            }
+          }
+        >
+          <ForwardRef(Typography)
+            component="a"
+            onClick={[Function]}
+          >
+            <ForwardRef(Button)
+              color="secondary"
+              disableElevation={true}
+              variant="text"
+            >
+              Beverages
+            </ForwardRef(Button)>
+          </ForwardRef(Typography)>
+          <ForwardRef(Divider) />
+        </ForwardRef(Typography)>
+        <ForwardRef(Typography)
+          component="span"
+          key="5b6899123d1a866534f516de"
+          style={
+            Object {
+              "cursor": "pointer",
+            }
+          }
+        >
+          <ForwardRef(Typography)
+            component="a"
+            onClick={[Function]}
+          >
+            <ForwardRef(Button)
+              color="secondary"
+              disableElevation={true}
+              variant="text"
+            >
+              Bakery Cakes and Dairy
+            </ForwardRef(Button)>
+          </ForwardRef(Typography)>
+          <ForwardRef(Divider) />
+        </ForwardRef(Typography)>
+      </ForwardRef(Typography)>
+    </ForwardRef(Grid)>
+  </ForwardRef(Grid)>
+</ForwardRef(Box)>
+`;
