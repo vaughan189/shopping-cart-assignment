@@ -1,43 +1,19 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import { Box, Container, Grid } from "@mui/material";
 import React, { useEffect } from "react";
-import useAxios from "../../api/useAxios";
 import { Carousal } from "../../components/Carousel";
 import { Categories } from "../../components/Categories";
-import { BANNERS, CATEGORIES } from "../../constants/endpoints";
+import useHome from "../../hooks/useHome";
 
 const Home = () => {
   const {
-    response: bannerData,
-    loading: bannerDataLoader,
-    fetchData: fetchBannerData,
-  } = useAxios();
-
-  const {
-    response: categoriesData,
-    loading: categoriesDataLoader,
-    fetchData: fetchCategories,
-  } = useAxios();
-
-  const getBanners = () => {
-    fetchBannerData({
-      method: "GET",
-      url: `${process.env.REACT_APP_SERVER_BASE_URL}${BANNERS}`,
-      headers: {
-        accept: "*/*",
-      },
-    });
-  };
-
-  const getCategories = () => {
-    fetchCategories({
-      method: "GET",
-      url: `${process.env.REACT_APP_SERVER_BASE_URL}${CATEGORIES}`,
-      headers: {
-        accept: "*/*",
-      },
-    });
-  };
+    bannerData,
+    bannerDataLoader,
+    categoriesData,
+    categoriesDataLoader,
+    getBanners,
+    getCategories,
+  } = useHome();
 
   useEffect(() => {
     getBanners();

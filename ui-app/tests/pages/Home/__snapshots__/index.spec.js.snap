@@ -1,6 +1,51 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Home Page should render the Home Page correctly 1`] = `
+exports[`Home Page should render the Home Page correctly if loading is false 1`] = `
+<ForwardRef(Box)
+  component="main"
+  sx={
+    Object {
+      "marginTop": "5%",
+    }
+  }
+>
+  <ForwardRef(Container)
+    maxWidth="xl"
+  >
+    <ForwardRef(Grid)
+      container={true}
+      direction="column"
+      spacing={2}
+    >
+      <ForwardRef(Grid)
+        container={true}
+        direction="row"
+      >
+        <ForwardRef(Grid)
+          item={true}
+          md={12}
+          sm={12}
+          xl={12}
+          xs={12}
+        >
+          <Carousal />
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
+          item={true}
+          md={12}
+          sm={12}
+          xl={12}
+          xs={12}
+        >
+          <Categories />
+        </ForwardRef(Grid)>
+      </ForwardRef(Grid)>
+    </ForwardRef(Grid)>
+  </ForwardRef(Container)>
+</ForwardRef(Box)>
+`;
+
+exports[`Home Page should render the Home Page correctly if loading is true 1`] = `
 <ForwardRef(Box)
   component="main"
   sx={
