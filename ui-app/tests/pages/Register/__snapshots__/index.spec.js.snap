@@ -269,6 +269,7 @@ exports[`Register Page should render the Register Page correctly 1`] = `
           xs={12}
         >
           <ForwardRef(Button)
+            id="submit-btn"
             onClick={[Function]}
             sx={
               Object {

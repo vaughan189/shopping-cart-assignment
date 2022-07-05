@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Products Page should render the Products Page correctly 1`] = `
+exports[`Products Page should render the Products Page correctly when loader is false 1`] = `
 <ForwardRef(Typography)
   component="div"
   sx={
@@ -47,7 +47,132 @@ exports[`Products Page should render the Products Page correctly 1`] = `
                 "color": "#FFFFFF",
               }
             }
-            value=""
+            value="5b675e5e5936635728f9fc30"
+          >
+            <ForwardRef(MenuItem)
+              onClick={[Function]}
+              value=""
+            >
+              Select Category
+            </ForwardRef(MenuItem)>
+          </ForwardRef(Select)>
+        </ForwardRef(FormControl)>
+      </ForwardRef(Typography)>
+      <ForwardRef(Typography)
+        component="div"
+        sx={
+          Object {
+            "display": Object {
+              "sm": "contents",
+              "xs": "none",
+            },
+          }
+        }
+      >
+        <ForwardRef(Grid)
+          item={true}
+          md={2}
+          sm={2}
+          xl={2}
+          xs="auto"
+        >
+          <Sidebar
+            handleCategorySelection={[MockFunction]}
+          />
+        </ForwardRef(Grid)>
+      </ForwardRef(Typography)>
+      <ForwardRef(Grid)
+        item={true}
+        md={10}
+        sm={10}
+        xl={10}
+        xs={12}
+      >
+        <ForwardRef(Grid)
+          container={true}
+          direction="column"
+        >
+          <ProductList
+            addProductsToCart={[MockFunction]}
+            productsData={
+              Array [
+                Object {
+                  "category": "5b6899953d1a866534f516e2",
+                  "description": "Kiwis are oval shaped with a brownish outer skin. The flesh is bright green and juicy with tiny, edible black seeds.",
+                  "id": "5b6c6a7f01a7c38429530883",
+                  "imageURL": "/static/images/products/fruit-n-veg/kiwi-green.jpg",
+                  "name": "Fresho Kiwi - Green, 3 pcs",
+                  "price": 87,
+                  "sku": "fnw-kiwi-3",
+                  "stock": 50,
+                },
+                Object {
+                  "category": "5b6899953d1a866534f516e2",
+                  "description": "The bright red coloured and heart shaped Washington apples are crunchy, juicy and slightly sweet. Washington Apples are a natural source of fibre and are fat free.",
+                  "id": "5b6c6aeb01a7c38429530884",
+                  "imageURL": "/static/images/products/fruit-n-veg/apple.jpg",
+                  "name": "Apple - Washington, Regular, 4 pcs",
+                  "price": 187,
+                  "sku": "fnw-apple-4",
+                  "stock": 50,
+                },
+              ]
+            }
+          />
+        </ForwardRef(Grid)>
+      </ForwardRef(Grid)>
+    </ForwardRef(Grid)>
+  </ForwardRef(Container)>
+</ForwardRef(Typography)>
+`;
+
+exports[`Products Page should render the Products Page correctly when loader is true 1`] = `
+<ForwardRef(Typography)
+  component="div"
+  sx={
+    Object {
+      "marginTop": "1%",
+    }
+  }
+>
+  <ForwardRef(Container)
+    maxWidth="xl"
+  >
+    <ForwardRef(Grid)
+      container={true}
+      direction="row"
+      justifyContent="flex-start"
+    >
+      <ForwardRef(Typography)
+        component="div"
+        sx={
+          Object {
+            "display": Object {
+              "sm": "none",
+              "xs": "contents",
+            },
+            "marginBottom": 2,
+            "marginTop": 2,
+          }
+        }
+      >
+        <ForwardRef(FormControl)
+          fullWidth={true}
+        >
+          <ForwardRef(InputLabel)
+            htmlFor="categories-menu"
+          >
+            Select Category
+          </ForwardRef(InputLabel)>
+          <ForwardRef(Select)
+            MenuProps={Object {}}
+            id="categories-menu"
+            sx={
+              Object {
+                "backgroundColor": "#c73f6d",
+                "color": "#FFFFFF",
+              }
+            }
           >
             <ForwardRef(MenuItem)
               onClick={[Function]}

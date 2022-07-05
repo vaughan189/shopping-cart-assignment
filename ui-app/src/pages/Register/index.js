@@ -222,6 +222,7 @@ const Register = () => {
             </Grid>
             <Grid item xs={12} md={12}>
               <Button
+                id="submit-btn"
                 variant="contained"
                 sx={{
                   width: { xl: "100%", md: "100%", sm: "90%", xs: "90%" },
@@ -242,4 +243,4 @@ const Register = () => {
   );
 };
 
-export default Register
+export default Register;

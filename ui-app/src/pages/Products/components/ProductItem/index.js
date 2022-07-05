@@ -109,6 +109,7 @@ export const ProductItem = (props) => {
               }}
             >
               <Button
+                id="xs-add-products-btn"
                 variant="contained"
                 fullWidth={true}
                 onClick={() => addProductsToCart(item)}
@@ -136,6 +137,7 @@ export const ProductItem = (props) => {
               MRP Rs.{item.price}
             </Typography>
             <Button
+              id="add-products-btn"
               variant="contained"
               onClick={() => addProductsToCart(item)}
             >
@@ -154,6 +156,7 @@ export const ProductItem = (props) => {
           }}
         >
           <Button
+            id="sm-add-products-btn"
             variant="contained"
             fullWidth={true}
             onClick={() => addProductsToCart(item)}

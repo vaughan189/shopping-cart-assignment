@@ -135,6 +135,7 @@ exports[`ProductItem component should render the ProductItem component correctly
         >
           <ForwardRef(Button)
             fullWidth={true}
+            id="xs-add-products-btn"
             onClick={[Function]}
             variant="contained"
           >
@@ -177,6 +178,7 @@ exports[`ProductItem component should render the ProductItem component correctly
           87
         </ForwardRef(Typography)>
         <ForwardRef(Button)
+          id="add-products-btn"
           onClick={[Function]}
           variant="contained"
         >
@@ -206,6 +208,7 @@ exports[`ProductItem component should render the ProductItem component correctly
     >
       <ForwardRef(Button)
         fullWidth={true}
+        id="sm-add-products-btn"
         onClick={[Function]}
         variant="contained"
       >
