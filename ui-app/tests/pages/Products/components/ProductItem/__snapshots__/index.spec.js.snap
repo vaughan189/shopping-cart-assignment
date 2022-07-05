@@ -1,0 +1,226 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ProductItem component should render the ProductItem component correctly 1`] = `
+<ForwardRef(Grid)
+  item={true}
+  key="5b6c6a7f01a7c38429530883"
+  md={3}
+  sm={6}
+  sx={
+    Object {
+      "display": "flex",
+    }
+  }
+  xl={3}
+  xs={12}
+>
+  <ForwardRef(Card)
+    sx={
+      Object {
+        "display": "flex",
+        "flexDirection": "column",
+        "justifyContent": "space-between",
+        "padding": "15px",
+        "width": Object {
+          "md": "100%",
+          "sm": "100%",
+          "xl": "100%",
+          "xs": "100%",
+        },
+      }
+    }
+  >
+    <ForwardRef(Box)
+      sx={
+        Object {
+          "display": "flex",
+          "flexDirection": "row",
+        }
+      }
+    >
+      <ForwardRef(Typography)
+        component="div"
+        gutterBottom={true}
+        sx={
+          Object {
+            "fontSize": Object {
+              "md": "1.25rem",
+              "sm": "1rem",
+              "xl": "1.25rem",
+              "xs": "1rem",
+            },
+            "fontWeight": "Bold",
+          }
+        }
+        variant="h6"
+      >
+        Fresho Kiwi - Green, 3 pcs
+      </ForwardRef(Typography)>
+    </ForwardRef(Box)>
+    <ForwardRef(Box)
+      sx={
+        Object {
+          "display": "flex",
+          "flexDirection": Object {
+            "md": "column",
+            "sm": "row",
+            "xl": "column",
+            "xs": "row",
+          },
+        }
+      }
+    >
+      <ForwardRef(CardMedia)
+        alt="Fresho Kiwi - Green, 3 pcs"
+        component="img"
+        image="/static/images/products/fruit-n-veg/kiwi-green.jpg"
+        sx={
+          Object {
+            "width": Object {
+              "md": 150,
+              "sm": 100,
+              "xl": 200,
+              "xs": 150,
+            },
+          }
+        }
+      />
+      <ForwardRef(CardContent)
+        sx={
+          Object {
+            "flex": "1 0 auto",
+          }
+        }
+      >
+        <ForwardRef(Typography)
+          color="text.secondary"
+          component="div"
+          sx={
+            Object {
+              "WebkitBoxOrient": "vertical",
+              "WebkitLineClamp": "4",
+              "backgroundColor": "rgb(200, 200, 200)",
+              "borderRadius": "5px",
+              "display": "-webkit-box",
+              "fontFamily": "Dosis",
+              "height": "78px",
+              "lineHeight": 1.3,
+              "overflow": "hidden",
+              "padding": 1,
+              "textOverflow": "ellipsis",
+              "width": Object {
+                "md": "100%",
+                "sm": "156px",
+                "xl": "100%",
+                "xs": "156px",
+              },
+            }
+          }
+          variant="subtitle1"
+        >
+          Kiwis are oval shaped with a brownish outer skin. The flesh is bright green and juicy with tiny, edible black seeds.
+        </ForwardRef(Typography)>
+        <ForwardRef(Box)
+          sx={
+            Object {
+              "display": Object {
+                "md": "none",
+                "sm": "none",
+                "xl": "none",
+                "xs": "flex",
+              },
+              "marginTop": 3,
+            }
+          }
+        >
+          <ForwardRef(Button)
+            fullWidth={true}
+            onClick={[Function]}
+            variant="contained"
+          >
+            <ForwardRef(Typography)
+              sx={
+                Object {
+                  "fontFamily": "Dosis",
+                }
+              }
+            >
+              Buy Now @ Rs.
+              87
+            </ForwardRef(Typography)>
+          </ForwardRef(Button)>
+        </ForwardRef(Box)>
+      </ForwardRef(CardContent)>
+      <ForwardRef(Box)
+        sx={
+          Object {
+            "alignItems": "center",
+            "display": Object {
+              "md": "flex",
+              "sm": "none",
+              "xl": "flex",
+              "xs": "none",
+            },
+            "flexDirection": "row",
+            "justifyContent": "space-around",
+          }
+        }
+      >
+        <ForwardRef(Typography)
+          sx={
+            Object {
+              "fontFamily": "Dosis",
+            }
+          }
+        >
+          MRP Rs.
+          87
+        </ForwardRef(Typography)>
+        <ForwardRef(Button)
+          onClick={[Function]}
+          variant="contained"
+        >
+          <ForwardRef(Typography)
+            sx={
+              Object {
+                "fontFamily": "Dosis",
+              }
+            }
+          >
+            Buy Now
+          </ForwardRef(Typography)>
+        </ForwardRef(Button)>
+      </ForwardRef(Box)>
+    </ForwardRef(Box)>
+    <ForwardRef(Box)
+      sx={
+        Object {
+          "display": Object {
+            "md": "none",
+            "sm": "flex",
+            "xl": "none",
+            "xs": "none",
+          },
+        }
+      }
+    >
+      <ForwardRef(Button)
+        fullWidth={true}
+        onClick={[Function]}
+        variant="contained"
+      >
+        <ForwardRef(Typography)
+          sx={
+            Object {
+              "fontFamily": "Dosis",
+            }
+          }
+        >
+          Buy Now @ Rs.
+          87
+        </ForwardRef(Typography)>
+      </ForwardRef(Button)>
+    </ForwardRef(Box)>
+  </ForwardRef(Card)>
+</ForwardRef(Grid)>
+`;

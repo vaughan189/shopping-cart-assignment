@@ -5,25 +5,29 @@ import {
   CheckOutSection,
   CartHeader,
 } from "../../../src/components/Cart";
+import { withHooks } from "jest-react-hooks-shallow";
+
+import useCart from "../../../src/hooks/useCart";
+jest.mock("../../../src/hooks/useCart");
 
 describe("Cart component", () => {
   it("should render the Cart component correctly when api is loading", () => {
-    jest.mock("../../../src/hooks/useCart.js", () => ({
-      useCart: () => ({
+    useCart.mockImplementation(() => {
+      return {
         cartProductsData: [],
         cartProductList: [],
         cartProductsDataLoader: true,
         addProductsToCart: jest.fn(),
         deleteCartItem: jest.fn(),
-      }),
-    }));
+      };
+    });
     const component = shallow(<Cart debug />);
     expect(component).toMatchSnapshot();
   });
 
   it("should render the Cart component correctly when api returns data", () => {
-    jest.mock("../../../src/hooks/useCart.js", () => ({
-      useCart: () => ({
+    useCart.mockImplementation(() => {
+      return {
         cartProductsData: [
           {
             productId: "5b6c6a7f01a7c38429530883",
@@ -71,22 +75,22 @@ describe("Cart component", () => {
         cartProductsDataLoader: false,
         addProductsToCart: jest.fn(),
         deleteCartItem: jest.fn(),
-      }),
-    }));
+      };
+    });
     const component = shallow(<Cart debug />);
     expect(component).toMatchSnapshot();
   });
 
   it("should render the Cart component correctly when api returns empty array", () => {
-    jest.mock("../../../src/hooks/useCart.js", () => ({
-      useCart: () => ({
+    useCart.mockImplementation(() => {
+      return {
         cartProductsData: [],
         cartProductList: [],
         cartProductsDataLoader: false,
         addProductsToCart: jest.fn(),
         deleteCartItem: jest.fn(),
-      }),
-    }));
+      };
+    });
     const component = shallow(<Cart debug />);
     expect(component).toMatchSnapshot();
   });
@@ -113,10 +117,12 @@ describe("Cart component", () => {
         },
       ],
     };
-    const component = shallow(
-      <CheckOutSection cartProductsData={cartProductsData} debug />
-    );
-    expect(component).toMatchSnapshot();
+    withHooks(() => {
+      const component = shallow(
+        <CheckOutSection cartProductsData={cartProductsData} debug />
+      );
+      expect(component).toMatchSnapshot();
+    });
   });
 
   it("should render the Cart Header component correctly", () => {

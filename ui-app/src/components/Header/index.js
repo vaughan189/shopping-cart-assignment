@@ -6,11 +6,7 @@ import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
 import Container from "@mui/material/Container";
 import Button from "@mui/material/Button";
-
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
-
-import "./index.scss";
-import { Cart } from "../Cart";
 import {
   ButtonGroup,
   Grid,
@@ -18,10 +14,12 @@ import {
   Typography,
   useMediaQuery,
 } from "@mui/material";
-import { useTheme } from "@emotion/react";
-import useCart from "../../hooks/useCart";
 
+import { Cart } from "../Cart";
+import useCart from "../../hooks/useCart";
 import { cartService } from "../../services";
+
+import "./index.scss";
 
 const routes = [
   {
@@ -38,9 +36,13 @@ const routes = [
 
 export const Header = () => {
   let history = useHistory();
-  const theme = useTheme();
-  const screenIsSM = useMediaQuery(theme.breakpoints.only("sm"));
-  const screenIsXS = useMediaQuery(theme.breakpoints.only("xs"));
+
+  const screenIsSM = useMediaQuery(
+    "@media (min-width:600px) and (max-width:899.95px)"
+  );
+  const screenIsXS = useMediaQuery(
+    "@media (min-width:0px) and (max-width:599.95px)"
+  );
 
   const { cartProductsData, getCartProducts } = useCart();
 
@@ -78,13 +80,13 @@ export const Header = () => {
     <AppBar
       position="sticky"
       style={{ backgroundColor: "#FFFFFF", height: "10%" }}
-      sx={{ zIndex: (thm) => thm.zIndex.drawer + 1 }}
     >
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <Grid container direction="row">
             <Grid item xl={2} md={2} sm={2} xs={2}>
               <img
+                id="home-icon-btn"
                 src={require("../../assets/logo.png")}
                 alt="Sabka Bazaar Logo"
                 onClick={() => {
@@ -113,6 +115,7 @@ export const Header = () => {
                   {routes.map((page) => (
                     <Grid key={page.id} item xl={1} md={2} sm={2} xs={1}>
                       <Button
+                        id={page.name + "-btn"}
                         style={{ color: "#000000" }}
                         sx={{ my: 2, color: "white", display: "block" }}
                         onClick={() => redirectToPage(page.path)}
@@ -153,6 +156,7 @@ export const Header = () => {
                     }}
                   >
                     <Button
+                      id="register-page-btn"
                       color="primary"
                       sx={{
                         fontSize: "1rem",
@@ -163,6 +167,7 @@ export const Header = () => {
                       SignIn
                     </Button>
                     <Button
+                      id="login-page-btn"
                       color="primary"
                       sx={{
                         fontSize: "1rem",
@@ -187,6 +192,7 @@ export const Header = () => {
                     }}
                   >
                     <Button
+                      id="cart-btn"
                       aria-describedby={id}
                       variant="outlined"
                       startIcon={<ShoppingCartIcon />}

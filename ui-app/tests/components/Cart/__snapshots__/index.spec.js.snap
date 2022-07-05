@@ -132,56 +132,92 @@ exports[`Cart component should render the Cart component correctly when api retu
   <ForwardRef(Box)
     sx={
       Object {
-        "display": "flex",
-        "flexDirection": "column",
-        "fontFamily": "Dosis",
-        "height": "100%",
-        "justifyContent": "Centre",
+        "height": "60%",
+        "overflowY": "inherit",
       }
     }
   >
-    <ForwardRef(Typography)
-      sx={
-        Object {
-          "display": "flex",
-          "flexDirection": "row",
-          "fontFamily": "Dosis",
-          "fontSize": 25,
-          "fontWeight": 600,
-          "justifyContent": "center",
-        }
-      }
+    <ForwardRef(Box)
+      key="1"
     >
-      No items in your cart
-    </ForwardRef(Typography)>
-    <ForwardRef(Typography)
-      sx={
-        Object {
-          "display": "flex",
-          "flexDirection": "row",
-          "fontFamily": "Dosis",
-          "fontSize": 18,
-          "fontWeight": 400,
-          "justifyContent": "center",
+      <CartItem
+        addProductsToCart={[MockFunction]}
+        cartItem={
+          Object {
+            "id": 1,
+            "imageURL": "/static/images/products/fruit-n-veg/kiwi-green.jpg",
+            "price": 87,
+            "productId": "5b6c6a7f01a7c38429530883",
+            "productName": "Fresho Kiwi - Green, 3 pcs",
+            "quantity": 1,
+          }
         }
-      }
+        deleteCartItem={[MockFunction]}
+      />
+    </ForwardRef(Box)>
+    <ForwardRef(Box)
+      key="2"
     >
-      Your favourite items are just a click away
-    </ForwardRef(Typography)>
-    <ForwardRef(Button)
-      sx={
-        Object {
-          "alignItems": "center",
-          "display": "flex",
-          "flexDirection": "row",
-          "justifyContent": "centre",
-          "textDecoration": "none",
+      <CartItem
+        addProductsToCart={[MockFunction]}
+        cartItem={
+          Object {
+            "id": 2,
+            "imageURL": "/static/images/products/fruit-n-veg/apple.jpg",
+            "price": 187,
+            "productId": "5b6c6aeb01a7c38429530884",
+            "productName": "Apple - Washington, Regular, 4 pcs",
+            "quantity": 2,
+          }
         }
+        deleteCartItem={[MockFunction]}
+      />
+    </ForwardRef(Box)>
+  </ForwardRef(Box)>
+  <ForwardRef(Box)
+    sx={
+      Object {
+        "display": "flex",
+        "flexDirection": "column",
+        "justifyContent": "space-between",
       }
-      variant="contained"
-    >
-      Start Shopping
-    </ForwardRef(Button)>
+    }
+  >
+    <ForwardRef(Box)>
+      <LowestPriceSection />
+    </ForwardRef(Box)>
+    <ForwardRef(Box)>
+      <CheckOutSection
+        cartProductsData={
+          Array [
+            Object {
+              "id": 1,
+              "imageURL": "/static/images/products/fruit-n-veg/kiwi-green.jpg",
+              "price": 87,
+              "productId": "5b6c6a7f01a7c38429530883",
+              "productName": "Fresho Kiwi - Green, 3 pcs",
+              "quantity": 1,
+            },
+            Object {
+              "id": 1,
+              "imageURL": "/static/images/products/fruit-n-veg/kiwi-green.jpg",
+              "price": 87,
+              "productId": "5b6c6a7f01a7c38429530883",
+              "productName": "Fresho Kiwi - Green, 3 pcs",
+              "quantity": 1,
+            },
+            Object {
+              "id": 2,
+              "imageURL": "/static/images/products/fruit-n-veg/apple.jpg",
+              "price": 187,
+              "productId": "5b6c6aeb01a7c38429530884",
+              "productName": "Apple - Washington, Regular, 4 pcs",
+              "quantity": 1,
+            },
+          ]
+        }
+      />
+    </ForwardRef(Box)>
   </ForwardRef(Box)>
 </ForwardRef(Box)>
 `;
@@ -321,6 +357,7 @@ exports[`Cart component should render the checkout section correctly 1`] = `
         }
       >
         Rs.
+        174
       </ForwardRef(Typography)>
       <ForwardRef(IconButton)
         aria-label="delete"

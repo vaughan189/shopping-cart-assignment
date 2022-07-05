@@ -9,6 +9,7 @@ import { LowestPriceSection } from "../LowestPrice";
 
 import ArrowForwardIosSharpIcon from "@mui/icons-material/ArrowForwardIosSharp";
 import useCart from "../../hooks/useCart";
+import { getTotalPrice } from "../../utils/cart";
 
 export const Cart = () => {
   const {
@@ -164,26 +165,13 @@ export const CheckOutSection = (props) => {
   const { cartProductsData } = props;
   const [totalPrice, setTotalPrice] = useState(0);
 
-  const getTotalPrice = () => {
-    return cartProductsData.data.reduce(
-      (a, b) => {
-        return {
-          price: a.price + b.price,
-        };
-      },
-      {
-        price: 0,
-      }
-    );
-  };
-
   useEffect(() => {
     if (
       cartProductsData &&
       cartProductsData.data &&
       cartProductsData.data.length > 0
     ) {
-      setTotalPrice(getTotalPrice());
+      setTotalPrice(getTotalPrice(cartProductsData));
     }
   }, [cartProductsData]);
 

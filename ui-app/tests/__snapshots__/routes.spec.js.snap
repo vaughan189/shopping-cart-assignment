@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Router component should render router component 1`] = `
+<Switch>
+  <Route
+    component={[Function]}
+    exact={true}
+    path="/"
+  />
+  <Route
+    component={[Function]}
+    exact={true}
+    path="/home"
+  />
+  <Route
+    component={[Function]}
+    exact={true}
+    path="/cart"
+  />
+  <Route
+    component={[Function]}
+    exact={true}
+    path="/products"
+  />
+  <Route
+    component={[Function]}
+    exact={true}
+    path="/login"
+  />
+  <Route
+    component={[Function]}
+    exact={true}
+    path="/register"
+  />
+  <Route
+    path="*"
+  >
+    <NotFound />
+  </Route>
+</Switch>
+`;
