@@ -56,6 +56,7 @@ exports[`Sidebar component should render the Sidebar component correctly 1`] = `
         >
           <ForwardRef(Typography)
             component="a"
+            id="id-5b675e5e5936635728f9fc30-btn"
             onClick={[Function]}
           >
             <ForwardRef(Button)
@@ -79,6 +80,7 @@ exports[`Sidebar component should render the Sidebar component correctly 1`] = `
         >
           <ForwardRef(Typography)
             component="a"
+            id="id-5b6899123d1a866534f516de-btn"
             onClick={[Function]}
           >
             <ForwardRef(Button)

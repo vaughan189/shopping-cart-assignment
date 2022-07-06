@@ -48,10 +48,10 @@ const Products = () => {
             <FormControl fullWidth>
               <InputLabel htmlFor="categories-menu">Select Category</InputLabel>
               <Select
-                id="categories-menu"
                 sx={{ color: "#FFFFFF", backgroundColor: "#c73f6d" }}
                 value={filterSelection}
                 MenuProps={{}}
+                inputProps={{ id: "categories-menu" }}
               >
                 <MenuItem value="" onClick={() => handleCategorySelection("")}>
                   Select Category

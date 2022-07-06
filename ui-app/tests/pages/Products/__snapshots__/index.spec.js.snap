@@ -40,7 +40,11 @@ exports[`Products Page should render the Products Page correctly when loader is 
           </ForwardRef(InputLabel)>
           <ForwardRef(Select)
             MenuProps={Object {}}
-            id="categories-menu"
+            inputProps={
+              Object {
+                "id": "categories-menu",
+              }
+            }
             sx={
               Object {
                 "backgroundColor": "#c73f6d",
@@ -166,7 +170,11 @@ exports[`Products Page should render the Products Page correctly when loader is 
           </ForwardRef(InputLabel)>
           <ForwardRef(Select)
             MenuProps={Object {}}
-            id="categories-menu"
+            inputProps={
+              Object {
+                "id": "categories-menu",
+              }
+            }
             sx={
               Object {
                 "backgroundColor": "#c73f6d",

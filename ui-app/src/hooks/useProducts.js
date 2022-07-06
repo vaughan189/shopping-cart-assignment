@@ -65,6 +65,7 @@ const useProducts = () => {
   }, [filterSelection]);
 
   return {
+    productsData,
     categoriesData,
     categoriesDataLoader,
     productsDataLoader,

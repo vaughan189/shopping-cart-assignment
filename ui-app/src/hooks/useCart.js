@@ -13,17 +13,10 @@ const useCart = () => {
     fetchData: fetchCartProducts,
   } = useAxios();
 
-  const {
-    response: deleteCartProductData,
-    // loading: deleteCartProductLoader,
-    fetchData: deleteCartProduct,
-  } = useAxios();
+  const { response: deleteCartProductData, fetchData: deleteCartProduct } =
+    useAxios();
 
-  const {
-    response: addProductData,
-    // loading: addProductDataLoader,
-    fetchData: addProducts,
-  } = useAxios();
+  const { response: addProductData, fetchData: addProducts } = useAxios();
 
   const getCartProducts = () => {
     fetchCartProducts({

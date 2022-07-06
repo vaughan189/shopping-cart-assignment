@@ -23,8 +23,13 @@ export const Sidebar = (props) => {
         <Grid item xs={12} sm={12} md={12} xl={12}>
           <Typography component={"div"} sx={{ fontFamily: "Dosis" }}>
             {categoriesData.map((item) => (
-              <Typography component={"span"} key={item.id} style={{ cursor: "pointer" }}>
+              <Typography
+                component={"span"}
+                key={item.id}
+                style={{ cursor: "pointer" }}
+              >
                 <Typography
+                  id={"id-" + item.id + "-btn"}
                   component={"a"}
                   onClick={() => handleCategorySelection(item.id)}
                 >
