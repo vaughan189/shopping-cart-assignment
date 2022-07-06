@@ -24,7 +24,7 @@
     "test": "jest --coverage",
     "test:watch": "jest --watch",
     "test:coverage": "jest --coverage --colors",
-    "test:summary": "jest --coverage --coverageReporters=text-summary",
+    "test:summary": "jest --coverage --colors --coverageReporters=text-summary",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -53,7 +53,7 @@
     "jest": "^28.1.2",
     "jest-enzyme": "^7.1.2",
     "jest-react-hooks-shallow": "^1.5.1",
-    "jest-sonar-reporter": "^2.0.0"
+    "jest-sonar": "^0.2.12"
   },
   "jest": {
     "moduleNameMapper": {
@@ -93,6 +93,18 @@
     "transformIgnorePatterns": [
       "<rootDir>/node_modules/"
     ],
+    "reporters": [
+      "default",
+      [
+        "jest-sonar",
+        {
+          "outputDirectory": "coverage",
+          "outputName": "test-report.xml",
+          "reportedFilePath": "absolute"
+        }
+      ]
+    ],
+    "collectCoverage": true,
     "verbose": false
   },
   "babel": {
