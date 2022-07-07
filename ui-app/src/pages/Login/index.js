@@ -80,9 +80,10 @@ const Login = () => {
                   margin: 2,
                 }}
               >
-                <InputLabel htmlFor="email">Email</InputLabel>
+                <InputLabel htmlFor="email-field">Email</InputLabel>
                 <Input
-                  id="email"
+                  id="email-field"
+                  name="email-field"
                   type="text"
                   {...register("email", {
                     required: true,
@@ -90,10 +91,7 @@ const Login = () => {
                   })}
                 />
                 {errors.email && (
-                  <FormHelperText
-                    id="component-error-text"
-                    sx={{ color: "red" }}
-                  >
+                  <FormHelperText id="email-error-text" sx={{ color: "red" }}>
                     Please enter a valid email
                   </FormHelperText>
                 )}
@@ -107,9 +105,10 @@ const Login = () => {
                   margin: 2,
                 }}
               >
-                <InputLabel htmlFor="password">Password</InputLabel>
+                <InputLabel htmlFor="password-field">Password</InputLabel>
                 <Input
-                  id="password"
+                  id="password-field"
+                  name="password-field"
                   type="password"
                   {...register("password", {
                     required: true,
@@ -119,7 +118,7 @@ const Login = () => {
                 />
                 {errors.password && (
                   <FormHelperText
-                    id="component-error-text"
+                    id="password-error-text"
                     sx={{ color: "red" }}
                   >
                     Please enter a valid password

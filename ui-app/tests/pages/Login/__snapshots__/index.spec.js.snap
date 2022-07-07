@@ -110,12 +110,12 @@ exports[`Login Page should render the Login Page correctly 1`] = `
             variant="standard"
           >
             <ForwardRef(InputLabel)
-              htmlFor="email"
+              htmlFor="email-field"
             >
               Email
             </ForwardRef(InputLabel)>
             <ForwardRef(Input)
-              id="email"
+              id="email-field"
               name="email"
               onBlur={[Function]}
               onChange={[Function]}
@@ -145,12 +145,12 @@ exports[`Login Page should render the Login Page correctly 1`] = `
             variant="standard"
           >
             <ForwardRef(InputLabel)
-              htmlFor="password"
+              htmlFor="password-field"
             >
               Password
             </ForwardRef(InputLabel)>
             <ForwardRef(Input)
-              id="password"
+              id="password-field"
               name="password"
               onBlur={[Function]}
               onChange={[Function]}
