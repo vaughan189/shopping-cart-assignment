@@ -36,55 +36,10 @@ exports[`Categories component should render the Categories Item component correc
       xl={6}
       xs={6}
     >
-      <ForwardRef(Grid)
-        alignItems="center"
-        container={true}
-        direction="column"
-        justifyContent="center"
-        spacing={3}
-      >
-        <ForwardRef(Grid)
-          className="categoryName"
-          item={true}
-          md={12}
-          sm={12}
-          xl={12}
-          xs={12}
-        >
-          Beverages
-        </ForwardRef(Grid)>
-        <ForwardRef(Grid)
-          item={true}
-          md={12}
-          sm={12}
-          xl={12}
-          xs={12}
-        >
-          Our beverage department will ensure your fridge is always fully stocked. Shop for soda, juice, beer and more. 
-        </ForwardRef(Grid)>
-        <ForwardRef(Grid)
-          item={true}
-          md={12}
-          sm={12}
-          xl={12}
-          xs={12}
-        >
-          <ForwardRef(Button)
-            color="primary"
-            id="left-explore-btn"
-            onClick={[Function]}
-            style={
-              Object {
-                "textTransform": "none",
-              }
-            }
-            variant="contained"
-          >
-            Explore 
-            Beverages
-          </ForwardRef(Button)>
-        </ForwardRef(Grid)>
-      </ForwardRef(Grid)>
+      <Explore
+        description="Our beverage department will ensure your fridge is always fully stocked. Shop for soda, juice, beer and more. "
+        name="Beverages"
+      />
     </ForwardRef(Grid)>
   </ForwardRef(Grid)>
 </ForwardRef(Card)>
@@ -112,55 +67,10 @@ exports[`Categories component should render the Categories Item component correc
       xl={6}
       xs={6}
     >
-      <ForwardRef(Grid)
-        alignItems="center"
-        container={true}
-        direction="column"
-        justifyContent="center"
-        spacing={3}
-      >
-        <ForwardRef(Grid)
-          className="categoryName"
-          item={true}
-          md={12}
-          sm={12}
-          xl={12}
-          xs={12}
-        >
-          Beverages
-        </ForwardRef(Grid)>
-        <ForwardRef(Grid)
-          item={true}
-          md={12}
-          sm={12}
-          xl={12}
-          xs={12}
-        >
-          Our beverage department will ensure your fridge is always fully stocked. Shop for soda, juice, beer and more. 
-        </ForwardRef(Grid)>
-        <ForwardRef(Grid)
-          item={true}
-          md={12}
-          sm={12}
-          xl={12}
-          xs={12}
-        >
-          <ForwardRef(Button)
-            color="primary"
-            id="right-explore-btn"
-            onClick={[Function]}
-            style={
-              Object {
-                "textTransform": "none",
-              }
-            }
-            variant="contained"
-          >
-            Explore 
-            Beverages
-          </ForwardRef(Button)>
-        </ForwardRef(Grid)>
-      </ForwardRef(Grid)>
+      <Explore
+        description="Our beverage department will ensure your fridge is always fully stocked. Shop for soda, juice, beer and more. "
+        name="Beverages"
+      />
     </ForwardRef(Grid)>
     <ForwardRef(Grid)
       item={true}

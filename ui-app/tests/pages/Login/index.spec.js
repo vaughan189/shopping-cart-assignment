@@ -1,6 +1,6 @@
 import React from "react";
 import reactRouterDom from "react-router-dom";
-import { mount, shallow } from "enzyme";
+import { shallow } from "enzyme";
 import Login from "../../../src/pages/Login";
 
 jest.mock("react-router-dom");
@@ -14,7 +14,7 @@ describe("Login Page", () => {
   });
 
   it("should trigger the submit function on button click", () => {
-    const component = mount(<Login debug />);
+    const component = shallow(<Login debug />);
     component.find("#email-field").simulate("change", {
       target: { value: "test@example.com", name: "email-field" },
     });
@@ -27,7 +27,7 @@ describe("Login Page", () => {
   });
 
   it("should trigger an error message if a wrong emailID is entered", () => {
-    const component = mount(<Login debug />);
+    const component = shallow(<Login debug />);
     component.find("#email-field").simulate("change", {
       target: { value: "test@example", name: "email-field" },
     });

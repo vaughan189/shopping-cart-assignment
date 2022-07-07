@@ -60,30 +60,4 @@ describe("Categories component", () => {
     const component = shallow(<CategoriesItem {...props} debug />);
     expect(component).toMatchSnapshot();
   });
-
-  it("should trigger the explore route function on clicking the left side button", () => {
-    const props = {
-      name: "Beverages",
-      description:
-        "Our beverage department will ensure your fridge is always fully stocked. Shop for soda, juice, beer and more. ",
-      imageUrl: "/static/images/category/beverages.png",
-      position: 0,
-    };
-    const component = shallow(<CategoriesItem {...props} debug />);
-    component.find("#left-explore-btn").simulate("click");
-    expect(pushMock).toHaveBeenCalled();
-  });
-
-  it("should trigger the explore route function on clicking the right side button", () => {
-    const props = {
-      name: "Beverages",
-      description:
-        "Our beverage department will ensure your fridge is always fully stocked. Shop for soda, juice, beer and more. ",
-      imageUrl: "/static/images/category/beverages.png",
-      position: 1,
-    };
-    const component = shallow(<CategoriesItem {...props} debug />);
-    component.find("#right-explore-btn").simulate("click");
-    expect(pushMock).toHaveBeenCalled();
-  });
 });
