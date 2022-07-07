@@ -72,7 +72,8 @@
       "!src/services/**",
       "!src/theme/**",
       "!src/utils/**",
-      "!src/reportWebVitals.js"
+      "!src/reportWebVitals.js",
+      "!src/configuration/**"
     ],
     "coverageReporters": [
       "json",

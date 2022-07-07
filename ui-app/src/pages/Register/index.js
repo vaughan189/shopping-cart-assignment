@@ -34,6 +34,7 @@ const Register = () => {
     <Container maxWidth="xl">
       <Grid container direction="row" spacing={10} sx={{ marginTop: "0%" }}>
         <Grid item xs="auto" sm="auto" md={2} xl={2}></Grid>
+        
         <Grid item xs={12} sm={12} md={4} xl={4}>
           <Grid
             container
@@ -66,6 +67,7 @@ const Register = () => {
             </Grid>
           </Grid>
         </Grid>
+        
         <Grid item xs={12} sm={12} md={4} xl={4}>
           <Grid
             container

@@ -90,6 +90,7 @@ exports[`Login Page should render the Login Page correctly 1`] = `
       >
         <ForwardRef(Grid)
           item={true}
+          key="email-field"
           md={12}
           sm={12}
           xl={12}
@@ -125,6 +126,7 @@ exports[`Login Page should render the Login Page correctly 1`] = `
         </ForwardRef(Grid)>
         <ForwardRef(Grid)
           item={true}
+          key="password-field"
           md={12}
           sm={12}
           xl={12}

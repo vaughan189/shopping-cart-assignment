@@ -11,11 +11,8 @@ import {
 } from "@mui/material";
 
 import { useForm } from "react-hook-form";
-import {
-  emailRegexPattern,
-  passwordRegexPattern,
-} from "../../constants/validation";
 import { useHistory } from "react-router-dom";
+import { loginConfiguration } from "../../configuration/Login/index";
 
 const Login = () => {
   let history = useHistory();
@@ -33,6 +30,7 @@ const Login = () => {
     <Container maxWidth="xl">
       <Grid container direction="row" spacing={10} sx={{ marginTop: "0%" }}>
         <Grid item xs="auto" sm="auto" md={2} xl={2}></Grid>
+        
         <Grid item xs={12} sm={12} md={4} xl={4}>
           <Grid
             container
@@ -65,6 +63,7 @@ const Login = () => {
             </Grid>
           </Grid>
         </Grid>
+        
         <Grid item xs={12} sm={12} md={4} xl={4}>
           <Grid
             container
@@ -72,60 +71,42 @@ const Login = () => {
             justifyContent="flex-start"
             alignItems="flex-start"
           >
-            <Grid item xs={12} sm={12} md={12} xl={12}>
-              <FormControl
-                variant="standard"
-                sx={{
-                  width: { xl: "100%", md: "100%", sm: "90%", xs: "90%" },
-                  margin: 2,
-                }}
-              >
-                <InputLabel htmlFor="email-field">Email</InputLabel>
-                <Input
-                  id="email-field"
-                  name="email-field"
-                  type="text"
-                  {...register("email", {
-                    required: true,
-                    pattern: emailRegexPattern,
-                  })}
-                />
-                {errors.email && (
-                  <FormHelperText id="email-error-text" sx={{ color: "red" }}>
-                    Please enter a valid email
-                  </FormHelperText>
-                )}
-              </FormControl>
-            </Grid>
-            <Grid item xs={12} sm={12} md={12} xl={12}>
-              <FormControl
-                variant="standard"
-                sx={{
-                  width: { xl: "100%", md: "100%", sm: "90%", xs: "90%" },
-                  margin: 2,
-                }}
-              >
-                <InputLabel htmlFor="password-field">Password</InputLabel>
-                <Input
-                  id="password-field"
-                  name="password-field"
-                  type="password"
-                  {...register("password", {
-                    required: true,
-                    minLength: 6,
-                    pattern: passwordRegexPattern,
-                  })}
-                />
-                {errors.password && (
-                  <FormHelperText
-                    id="password-error-text"
-                    sx={{ color: "red" }}
+            {loginConfiguration.map((config) => {
+              return (
+                <Grid item xs={12} sm={12} md={12} xl={12} key={config.id}>
+                  <FormControl
+                    variant="standard"
+                    sx={{
+                      width: { xl: "100%", md: "100%", sm: "90%", xs: "90%" },
+                      margin: 2,
+                    }}
                   >
-                    Please enter a valid password
-                  </FormHelperText>
-                )}
-              </FormControl>
-            </Grid>
+                    <InputLabel htmlFor={config.id}>{config.label}</InputLabel>
+                    <Input
+                      id={config.id}
+                      name={config.name}
+                      type={config.type}
+                      {...register(config.validation.name, {
+                        ...(config.validation.required && {
+                          required: config.validation.required,
+                        }),
+                        ...(config.validation.pattern && {
+                          pattern: config.validation.pattern,
+                        }),
+                      })}
+                    />
+                    {errors[config.error.name] && (
+                      <FormHelperText
+                        id={config.error.id}
+                        sx={{ color: "red" }}
+                      >
+                        {config.error.message}
+                      </FormHelperText>
+                    )}
+                  </FormControl>
+                </Grid>
+              );
+            })}
             <Grid item xs={12} md={12}>
               <Button
                 id="login-btn"
