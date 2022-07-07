@@ -2,6 +2,7 @@
 
 exports[`Footer component should render the Footer component correctly 1`] = `
 <ForwardRef(Typography)
+  component="div"
   sx={
     Object {
       "backgroundColor": "#ececec",
@@ -30,6 +31,7 @@ exports[`Footer component should render the Footer component correctly 1`] = `
     }
   >
     <ForwardRef(Typography)
+      component="div"
       sx={
         Object {
           "fontFamily": "Dosis",

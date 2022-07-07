@@ -76,6 +76,7 @@ exports[`ProductItem component should render the ProductItem component correctly
         image="/static/images/products/fruit-n-veg/kiwi-green.jpg"
         sx={
           Object {
+            "margin": "auto",
             "width": Object {
               "md": 150,
               "sm": 100,
@@ -88,7 +89,12 @@ exports[`ProductItem component should render the ProductItem component correctly
       <ForwardRef(CardContent)
         sx={
           Object {
-            "flex": "1 0 auto",
+            "marginBottom": Object {
+              "xl": "10px",
+            },
+            "padding": Object {
+              "xl": "0px",
+            },
           }
         }
       >
@@ -110,9 +116,9 @@ exports[`ProductItem component should render the ProductItem component correctly
               "textOverflow": "ellipsis",
               "width": Object {
                 "md": "100%",
-                "sm": "156px",
-                "xl": "100%",
-                "xs": "156px",
+                "sm": "90%",
+                "xl": "90%",
+                "xs": "90%",
               },
             }
           }

@@ -66,11 +66,16 @@ export const ProductItem = (props) => {
         >
           <CardMedia
             component="img"
-            sx={{ width: { xl: 200, md: 150, sm: 100, xs: 150 } }}
+            sx={{
+              width: { xl: 200, md: 150, sm: 100, xs: 150 },
+              margin: "auto",
+            }}
             image={item.imageURL}
             alt={item.name}
           />
-          <CardContent sx={{ flex: "1 0 auto" }}>
+          <CardContent
+            sx={{ padding: { xl: "0px" }, marginBottom: { xl: "10px" } }}
+          >
             <Typography
               sx={{
                 height: "78px",
@@ -85,10 +90,10 @@ export const ProductItem = (props) => {
                 backgroundColor: "rgb(200, 200, 200)",
                 padding: 1,
                 width: {
-                  xl: "100%",
+                  xl: "90%",
                   md: "100%",
-                  sm: "156px",
-                  xs: "156px",
+                  sm: "90%",
+                  xs: "90%",
                 },
               }}
               variant="subtitle1"

@@ -34,7 +34,7 @@ const Register = () => {
     <Container maxWidth="xl">
       <Grid container direction="row" spacing={10} sx={{ marginTop: "0%" }}>
         <Grid item xs="auto" sm="auto" md={2} xl={2}></Grid>
-        
+
         <Grid item xs={12} sm={12} md={4} xl={4}>
           <Grid
             container
@@ -67,7 +67,7 @@ const Register = () => {
             </Grid>
           </Grid>
         </Grid>
-        
+
         <Grid item xs={12} sm={12} md={4} xl={4}>
           <Grid
             container
@@ -141,7 +141,10 @@ const Register = () => {
                   type="text"
                   {...register("email", {
                     required: true,
-                    pattern: emailRegexPattern,
+                    pattern: {
+                      value: emailRegexPattern,
+                      message: "Please enter a valid email",
+                    },
                   })}
                 />
                 {errors.email && (
@@ -149,7 +152,7 @@ const Register = () => {
                     id="component-error-text"
                     sx={{ color: "red" }}
                   >
-                    Please enter a valid the email
+                    {errors.email.message}
                   </FormHelperText>
                 )}
               </FormControl>
@@ -172,7 +175,11 @@ const Register = () => {
                       value: 6,
                       message: "Password must have at least 6 characters",
                     },
-                    pattern: passwordRegexPattern,
+                    pattern: {
+                      value: passwordRegexPattern,
+                      message:
+                        "Please enter a valid password, must include lower, upper, number, and special chars",
+                    },
                   })}
                 />
                 {errors.password && (
@@ -201,14 +208,9 @@ const Register = () => {
                   type="password"
                   {...register("confirmPassword", {
                     required: "Please enter a valid password",
-                    minLength: {
-                      value: 6,
-                      message: "Password must have at least 6 characters",
-                    },
-                    pattern: passwordRegexPattern,
                     validate: (value) => {
                       const { password } = getValues();
-                      return (password === value) | "Passwords should match!";
+                      if (password !== value) return "Passwords should match!";
                     },
                   })}
                 />
@@ -233,7 +235,6 @@ const Register = () => {
                   textTransform: "none",
                 }}
                 onClick={handleSubmit(onSubmit)}
-                disabled={errors.email || errors.password}
               >
                 Login
               </Button>
