@@ -27,6 +27,7 @@ exports[`Categories component should render the Categories Item component correc
         component="img"
         height="400"
         image="/static/images/category/beverages.png"
+        rel="preload"
       />
     </ForwardRef(Grid)>
     <ForwardRef(Grid)
@@ -84,6 +85,7 @@ exports[`Categories component should render the Categories Item component correc
         component="img"
         height="400"
         image="/static/images/category/beverages.png"
+        rel="preload"
       />
     </ForwardRef(Grid)>
   </ForwardRef(Grid)>
