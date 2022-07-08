@@ -5,8 +5,6 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { ThemeProvider } from "@mui/material";
 
-import "./assets/fonts/Dosis-VariableFont_wght.ttf";
-
 import { theme } from "./theme";
 
 ReactDOM.render(
