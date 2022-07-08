@@ -37,6 +37,7 @@ export const CategoriesItem = (props) => {
           <>
             <Grid item xs={4} sm={4} md={4} xl={4}>
               <CardMedia
+                rel="preload"
                 component="img"
                 height="400"
                 image={imageUrl}
@@ -55,6 +56,7 @@ export const CategoriesItem = (props) => {
             </Grid>
             <Grid item xs={4} sm={4} md={4} xl={4}>
               <CardMedia
+                rel="preload"
                 component="img"
                 height="400"
                 image={imageUrl}

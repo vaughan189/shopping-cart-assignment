@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Suspense } from "react";
 
 import { BrowserRouter as Router } from "react-router-dom";
 import { Footer } from "./components/Footer";
@@ -10,9 +10,9 @@ function App() {
   return (
     <Router>
       <Header />
-      <div>
+      <Suspense fallback={<div>Loading...</div>}>
         <Routes />
-      </div>
+      </Suspense>
       <Footer />
     </Router>
   );

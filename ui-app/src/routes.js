@@ -1,12 +1,12 @@
-import React from "react";
+import React, { lazy } from "react";
 import { Route, Switch } from "react-router-dom";
 
-import Home from "./pages/Home";
-import Cart from "./pages/Cart";
-import NotFound from "./pages/NotFound";
-import Products from "./pages/Products";
-import Login from "./pages/Login";
-import Register from "./pages/Register";
+const Home = lazy(() => import("./pages/Home"));
+const Cart = lazy(() => import("./pages/Cart"));
+const NotFound = lazy(() => import("./pages/NotFound"));
+const Login = lazy(() => import("./pages/Login"));
+const Products = lazy(() => import("./pages/Products"));
+const Register = lazy(() => import("./pages/Register"));
 
 export const Routes = () => {
   return (
