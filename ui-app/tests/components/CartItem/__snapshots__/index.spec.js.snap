@@ -1,0 +1,218 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CartItem component should render the CartItem component correctly 1`] = `
+<ForwardRef(Card)
+  sx={
+    Object {
+      "margin": 1,
+    }
+  }
+>
+  <ForwardRef(CardActionArea)>
+    <ForwardRef(Box)
+      sx={
+        Object {
+          "display": "flex",
+          "flexDirection": "row",
+          "justifyContent": "space-between",
+        }
+      }
+    >
+      <ForwardRef(CardMedia)
+        alt="green iguana"
+        component="img"
+        height="20"
+        image="/static/images/products/fruit-n-veg/kiwi-green.jpg"
+        sx={
+          Object {
+            "height": Object {
+              "md": 50,
+              "sm": 100,
+              "xl": 100,
+              "xs": 100,
+            },
+            "width": Object {
+              "md": 50,
+              "sm": 100,
+              "xl": 100,
+              "xs": 100,
+            },
+          }
+        }
+      />
+      <ForwardRef(CardContent)
+        sx={
+          Object {
+            "width": Object {
+              "md": "100%",
+              "sm": "100%",
+              "xl": "100%",
+              "xs": "100%",
+            },
+          }
+        }
+      >
+        <ForwardRef(Box)
+          sx={
+            Object {
+              "display": "flex",
+              "flexDirection": "column",
+            }
+          }
+        >
+          <ForwardRef(Typography)
+            component="div"
+            gutterBottom={true}
+            sx={
+              Object {
+                "fontSize": Object {
+                  "md": "1rem",
+                  "sm": "1rem",
+                  "xl": "1rem",
+                  "xs": "1rem",
+                },
+                "fontWeight": "Bold",
+              }
+            }
+            variant="h6"
+          >
+            Fresho Kiwi - Green, 3 pcs
+          </ForwardRef(Typography)>
+          <ForwardRef(Box)
+            sx={
+              Object {
+                "alignItems": "center",
+                "display": "flex",
+                "flexDirection": "row",
+                "justifyContent": "space-between",
+              }
+            }
+          >
+            <ForwardRef(Box)
+              sx={
+                Object {
+                  "alignItems": "flex-start",
+                  "display": "flex",
+                  "flexDirection": "row",
+                  "justifyContent": "space-evenly",
+                  "width": Object {
+                    "md": "40%",
+                    "sm": "40%",
+                    "xl": "40%",
+                    "xs": "70%",
+                  },
+                }
+              }
+            >
+              <ForwardRef(IconButton)
+                aria-label="subtract"
+                id="subtract-Cart-Item"
+                onClick={[Function]}
+                size="small"
+                sx={
+                  Object {
+                    "&.MuiButtonBase-root:hover": Object {
+                      "bgcolor": "#c73f6d",
+                    },
+                    "backgroundColor": "#c73f6d",
+                    "borderRadius": Object {
+                      "md": 5,
+                      "sm": 0,
+                      "xl": 5,
+                      "xs": 0,
+                    },
+                    "color": "#FFFFFF",
+                    "height": "20px",
+                    "width": "20px",
+                  }
+                }
+              >
+                <Memo(ForwardRef(RemoveSharpIcon)) />
+              </ForwardRef(IconButton)>
+              <ForwardRef(Typography)
+                component="div"
+                sx={
+                  Object {
+                    "fontFamily": "Dosis",
+                    "width": "10px",
+                  }
+                }
+              >
+                1
+              </ForwardRef(Typography)>
+              <ForwardRef(IconButton)
+                aria-label="add"
+                id="add-Cart-Item"
+                onClick={[Function]}
+                size="small"
+                sx={
+                  Object {
+                    "&.MuiButtonBase-root:hover": Object {
+                      "bgcolor": "#c73f6d",
+                    },
+                    "backgroundColor": "#c73f6d",
+                    "borderRadius": Object {
+                      "md": 5,
+                      "sm": 0,
+                      "xl": 5,
+                      "xs": 0,
+                    },
+                    "color": "#FFFFFF",
+                    "height": "20px",
+                    "width": "20px",
+                  }
+                }
+              >
+                <Memo(ForwardRef(AddSharpIcon)) />
+              </ForwardRef(IconButton)>
+              <ForwardRef(Typography)
+                component="div"
+                sx={
+                  Object {
+                    "fontFamily": "Dosis",
+                  }
+                }
+              >
+                X
+              </ForwardRef(Typography)>
+              <ForwardRef(Typography)
+                component="div"
+                sx={
+                  Object {
+                    "fontFamily": "Dosis",
+                  }
+                }
+              >
+                Rs.
+                87
+              </ForwardRef(Typography)>
+            </ForwardRef(Box)>
+            <ForwardRef(Box)
+              sx={
+                Object {
+                  "alignItems": "center",
+                  "display": "flex",
+                  "flexDirection": "row",
+                  "justifyContent": "space-around",
+                }
+              }
+            >
+              <ForwardRef(Typography)
+                component="div"
+                sx={
+                  Object {
+                    "fontFamily": "Dosis",
+                  }
+                }
+              >
+                Rs. 
+                87
+              </ForwardRef(Typography)>
+            </ForwardRef(Box)>
+          </ForwardRef(Box)>
+        </ForwardRef(Box)>
+      </ForwardRef(CardContent)>
+    </ForwardRef(Box)>
+  </ForwardRef(CardActionArea)>
+</ForwardRef(Card)>
+`;

@@ -1,0 +1,42 @@
+export const mockCartData = [
+  {
+    productId: "5b6c6a7f01a7c38429530883",
+    productName: "Fresho Kiwi - Green, 3 pcs",
+    imageURL: "/static/images/products/fruit-n-veg/kiwi-green.jpg",
+    price: 87,
+    quantity: 1,
+    id: 1,
+  },
+  {
+    productId: "5b6c6aeb01a7c38429530884",
+    productName: "Apple - Washington, Regular, 4 pcs",
+    imageURL: "/static/images/products/fruit-n-veg/apple.jpg",
+    price: 187,
+    quantity: 1,
+    id: 2,
+  },
+  {
+    productId: "5b6c6b7001a7c38429530885",
+    productName: "Fresho Pomegrante Peeled, 500 gm ",
+    imageURL: "/static/images/products/fruit-n-veg/pomegrante.jpg",
+    price: 88,
+    quantity: 1,
+    id: 3,
+  },
+  {
+    productId: "5b6c6bdc01a7c38429530886",
+    productName: "Capsicum - Green, 1 kg",
+    imageURL: "/static/images/products/fruit-n-veg/capsicum-green.jpg",
+    price: 137,
+    quantity: 1,
+    id: 4,
+  },
+  {
+    productId: "5b6c6a7f01a7c38429530883",
+    productName: "Fresho Kiwi - Green, 3 pcs",
+    imageURL: "/static/images/products/fruit-n-veg/kiwi-green.jpg",
+    price: 87,
+    quantity: 1,
+    id: 5,
+  },
+];
