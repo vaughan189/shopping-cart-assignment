@@ -1,0 +1,112 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Categories component should render the Categories Item component correctly for left position 1`] = `
+<ForwardRef(Card)
+  className="CategoriesItem"
+  sx={
+    Object {
+      "minHeight": 260,
+    }
+  }
+>
+  <ForwardRef(Grid)
+    alignItems="center"
+    container={true}
+    direction="row"
+    justifyContent="center"
+  >
+    <ForwardRef(Grid)
+      item={true}
+      md={4}
+      sm={4}
+      xl={4}
+      xs={4}
+    >
+      <ForwardRef(CardMedia)
+        alt="Beverages"
+        component="img"
+        height="400"
+        image="/static/images/category/beverages.png"
+        rel="preload"
+      />
+    </ForwardRef(Grid)>
+    <ForwardRef(Grid)
+      item={true}
+      md={6}
+      sm={6}
+      xl={6}
+      xs={6}
+    >
+      <Explore
+        description="Our beverage department will ensure your fridge is always fully stocked. Shop for soda, juice, beer and more. "
+        name="Beverages"
+      />
+    </ForwardRef(Grid)>
+  </ForwardRef(Grid)>
+</ForwardRef(Card)>
+`;
+
+exports[`Categories component should render the Categories Item component correctly for right position 1`] = `
+<ForwardRef(Card)
+  className="CategoriesItem"
+  sx={
+    Object {
+      "minHeight": 260,
+    }
+  }
+>
+  <ForwardRef(Grid)
+    alignItems="center"
+    container={true}
+    direction="row"
+    justifyContent="center"
+  >
+    <ForwardRef(Grid)
+      item={true}
+      md={6}
+      sm={6}
+      xl={6}
+      xs={6}
+    >
+      <Explore
+        description="Our beverage department will ensure your fridge is always fully stocked. Shop for soda, juice, beer and more. "
+        name="Beverages"
+      />
+    </ForwardRef(Grid)>
+    <ForwardRef(Grid)
+      item={true}
+      md={4}
+      sm={4}
+      xl={4}
+      xs={4}
+    >
+      <ForwardRef(CardMedia)
+        alt="Beverages"
+        component="img"
+        height="400"
+        image="/static/images/category/beverages.png"
+        rel="preload"
+      />
+    </ForwardRef(Grid)>
+  </ForwardRef(Grid)>
+</ForwardRef(Card)>
+`;
+
+exports[`Categories component should render the Categories component correctly 1`] = `
+<Fragment>
+  <CategoriesItem
+    description="Our beverage department will ensure your fridge is always fully stocked. Shop for soda, juice, beer and more. "
+    imageUrl="/static/images/category/beverages.png"
+    key="5b675e5e5936635728f9fc30"
+    name="Beverages"
+    position={0}
+  />
+  <CategoriesItem
+    description="The best cupcakes, cookies, cakes, pies, cheesecakes, fresh bread, biscotti, muffins, bagels, fresh coffee, milk and more."
+    imageUrl="/static/images/category/bakery.png"
+    key="5b6899123d1a866534f516de"
+    name="Bakery Cakes and Dairy"
+    position={1}
+  />
+</Fragment>
+`;

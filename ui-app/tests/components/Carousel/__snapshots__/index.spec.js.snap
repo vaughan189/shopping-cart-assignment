@@ -1,0 +1,49 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Carousel component should render each CarouselItem component correctly 1`] = `
+<ForwardRef(Card)>
+  <ForwardRef(CardActionArea)>
+    <ForwardRef(CardMedia)
+      alt="Independence Day Deal - Rs120 off on surf"
+      component="img"
+      height="400"
+      image="/static/images/offers/offer2.jpg"
+    />
+  </ForwardRef(CardActionArea)>
+</ForwardRef(Card)>
+`;
+
+exports[`Carousel component should render the Carousel component correctly 1`] = `
+<Carousel
+  className="CarouselItem"
+>
+  <CarouselItem
+    bannerImageAlt="Independence Day Deal - 25% off on shampoo"
+    bannerImageUrl="/static/images/offers/offer1.jpg"
+    item={
+      Object {
+        "bannerImageAlt": "Independence Day Deal - 25% off on shampoo",
+        "bannerImageUrl": "/static/images/offers/offer1.jpg",
+        "id": "5b6c38156cb7d770b7010ccc",
+        "isActive": true,
+        "order": 1,
+      }
+    }
+    key="0"
+  />
+  <CarouselItem
+    bannerImageAlt="Independence Day Deal - Rs120 off on surf"
+    bannerImageUrl="/static/images/offers/offer2.jpg"
+    item={
+      Object {
+        "bannerImageAlt": "Independence Day Deal - Rs120 off on surf",
+        "bannerImageUrl": "/static/images/offers/offer2.jpg",
+        "id": "5b6c38336cb7d770b7010ccd",
+        "isActive": true,
+        "order": 2,
+      }
+    }
+    key="1"
+  />
+</Carousel>
+`;

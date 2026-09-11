@@ -1,0 +1,101 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ProductList component should render the ProductList component correctly 1`] = `
+<ForwardRef(Box)
+  component="div"
+  sx={
+    Object {
+      "paddingBottom": "4%",
+      "paddingLeft": Object {
+        "md": "40px",
+        "sm": "0px",
+        "xl": "30px",
+        "xs": "0px",
+      },
+    }
+  }
+>
+  <ForwardRef(Grid)
+    container={true}
+    direction="row"
+    spacing={2}
+  >
+    <ProductItem
+      addProductsToCart={[MockFunction]}
+      item={
+        Object {
+          "category": "5b6899953d1a866534f516e2",
+          "description": "Kiwis are oval shaped with a brownish outer skin. The flesh is bright green and juicy with tiny, edible black seeds.",
+          "id": "5b6c6a7f01a7c38429530883",
+          "imageURL": "/static/images/products/fruit-n-veg/kiwi-green.jpg",
+          "name": "Fresho Kiwi - Green, 3 pcs",
+          "price": 87,
+          "sku": "fnw-kiwi-3",
+          "stock": 50,
+        }
+      }
+      key="5b6c6a7f01a7c38429530883"
+    />
+    <ProductItem
+      addProductsToCart={[MockFunction]}
+      item={
+        Object {
+          "category": "5b6899953d1a866534f516e2",
+          "description": "The bright red coloured and heart shaped Washington apples are crunchy, juicy and slightly sweet. Washington Apples are a natural source of fibre and are fat free.",
+          "id": "5b6c6aeb01a7c38429530884",
+          "imageURL": "/static/images/products/fruit-n-veg/apple.jpg",
+          "name": "Apple - Washington, Regular, 4 pcs",
+          "price": 187,
+          "sku": "fnw-apple-4",
+          "stock": 50,
+        }
+      }
+      key="5b6c6aeb01a7c38429530884"
+    />
+  </ForwardRef(Grid)>
+</ForwardRef(Box)>
+`;
+
+exports[`ProductList component should render the ProductList component correctly if product list is empty 1`] = `
+<ForwardRef(Grid)
+  container={true}
+  direction="row"
+  spacing={2}
+>
+  <ForwardRef(Grid)
+    item={true}
+    md={12}
+    sm={12}
+    xl={12}
+    xs={12}
+  >
+    <ForwardRef(Box)
+      sx={
+        Object {
+          "marginLeft": "2%",
+          "marginTop": "2%",
+          "width": "100%",
+        }
+      }
+    >
+      <ForwardRef(Alert)
+        color="primary"
+        severity="info"
+        sx={
+          Object {
+            "display": "flex",
+            "flexDirection": "row",
+            "fontFamily": "Dosis",
+            "fontSize": 18,
+            "fontWeight": 400,
+            "justifyContent": "center",
+            "width": "100%",
+          }
+        }
+      >
+        No data found
+      </ForwardRef(Alert)>
+    </ForwardRef(Box)>
+  </ForwardRef(Grid)>
+</ForwardRef(Grid)>
+`;

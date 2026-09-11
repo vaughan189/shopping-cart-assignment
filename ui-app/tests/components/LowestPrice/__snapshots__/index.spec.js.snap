@@ -1,0 +1,50 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LowestPriceSection component should render the LowestPriceSection component correctly 1`] = `
+<ForwardRef(Card)
+  sx={
+    Object {
+      "margin": 1,
+      "pointerEvents": "none",
+    }
+  }
+>
+  <ForwardRef(CardActionArea)>
+    <ForwardRef(Box)
+      sx={
+        Object {
+          "display": "flex",
+          "flexDirection": "row",
+          "justifyContent": "flex-start",
+          "padding": 1,
+        }
+      }
+    >
+      <ForwardRef(CardMedia)
+        alt="green iguana"
+        component="img"
+        image="/static/images/lowest-price.png"
+        sx={
+          Object {
+            "height": 54,
+            "objectFit": " contain",
+            "width": 152,
+          }
+        }
+      />
+      <ForwardRef(CardContent)>
+        <ForwardRef(Typography)
+          sx={
+            Object {
+              "fontFamily": "Dosis",
+              "fontSize": 16,
+            }
+          }
+        >
+          You won't find it cheaper anywhere
+        </ForwardRef(Typography)>
+      </ForwardRef(CardContent)>
+    </ForwardRef(Box)>
+  </ForwardRef(CardActionArea)>
+</ForwardRef(Card)>
+`;

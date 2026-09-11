@@ -1,0 +1,278 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header component should render the Header component correctly 1`] = `
+<ForwardRef(AppBar)
+  position="sticky"
+  style={
+    Object {
+      "backgroundColor": "#FFFFFF",
+      "height": "10%",
+    }
+  }
+>
+  <ForwardRef(Container)
+    maxWidth="xl"
+  >
+    <ForwardRef(Toolbar)
+      disableGutters={true}
+    >
+      <ForwardRef(Grid)
+        container={true}
+        direction="row"
+      >
+        <ForwardRef(Grid)
+          item={true}
+          md={2}
+          sm={2}
+          xl={2}
+          xs={2}
+        >
+          <img
+            alt="Sabka Bazaar Logo"
+            id="home-icon-btn"
+            onClick={[Function]}
+            src={Object {}}
+            style={
+              Object {
+                "cursor": "pointer",
+              }
+            }
+          />
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
+          item={true}
+          md={6}
+          sm={6}
+          xl={6}
+          xs="auto"
+        >
+          <ForwardRef(Grid)
+            alignItems="center"
+            container={true}
+            direction="row"
+            justifyContent="center"
+          >
+            <ForwardRef(Box)
+              sx={
+                Object {
+                  "display": Object {
+                    "md": "contents",
+                    "sm": "contents",
+                    "xl": "contents",
+                    "xs": "none",
+                  },
+                }
+              }
+            >
+              <ForwardRef(Grid)
+                item={true}
+                key="1"
+                md={2}
+                sm={2}
+                xl={1}
+                xs={1}
+              >
+                <ForwardRef(Button)
+                  id="Home-btn"
+                  onClick={[Function]}
+                  style={
+                    Object {
+                      "color": "#000000",
+                    }
+                  }
+                  sx={
+                    Object {
+                      "color": "white",
+                      "display": "block",
+                      "my": 2,
+                    }
+                  }
+                >
+                  Home
+                </ForwardRef(Button)>
+              </ForwardRef(Grid)>
+              <ForwardRef(Grid)
+                item={true}
+                key="2"
+                md={2}
+                sm={2}
+                xl={1}
+                xs={1}
+              >
+                <ForwardRef(Button)
+                  id="Products-btn"
+                  onClick={[Function]}
+                  style={
+                    Object {
+                      "color": "#000000",
+                    }
+                  }
+                  sx={
+                    Object {
+                      "color": "white",
+                      "display": "block",
+                      "my": 2,
+                    }
+                  }
+                >
+                  Products
+                </ForwardRef(Button)>
+              </ForwardRef(Grid)>
+            </ForwardRef(Box)>
+          </ForwardRef(Grid)>
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
+          item={true}
+          md={4}
+          sm={4}
+          xl={4}
+          xs={4}
+        >
+          <ForwardRef(Grid)
+            alignItems="flex-end"
+            container={true}
+            direction="column"
+            justifyContent="space-around"
+            sx={
+              Object {
+                "marginBottom": Object {
+                  "sm": "6px",
+                },
+                "marginLeft": Object {
+                  "xs": "8px",
+                },
+              }
+            }
+          >
+            <ForwardRef(Grid)
+              item={true}
+              md={12}
+              sm={12}
+              sx={
+                Object {
+                  "marginTop": Object {
+                    "md": "8px",
+                    "sm": 0,
+                    "xl": "8px",
+                  },
+                }
+              }
+              xl={12}
+              xs={12}
+            >
+              <ForwardRef(ButtonGroup)
+                aria-label="text button group"
+                className="buttonGroup"
+                color="primary"
+                size="small"
+                sx={
+                  Object {
+                    "& .MuiButtonGroup-grouped": Object {
+                      "borderRight": "none !important",
+                    },
+                  }
+                }
+                variant="text"
+              >
+                <ForwardRef(Button)
+                  color="primary"
+                  id="register-page-btn"
+                  onClick={[Function]}
+                  sx={
+                    Object {
+                      "fontSize": "1rem",
+                      "textTransform": "none",
+                    }
+                  }
+                >
+                  SignIn
+                </ForwardRef(Button)>
+                <ForwardRef(Button)
+                  color="primary"
+                  id="login-page-btn"
+                  onClick={[Function]}
+                  sx={
+                    Object {
+                      "fontSize": "1rem",
+                      "textTransform": "none",
+                    }
+                  }
+                >
+                  Login
+                </ForwardRef(Button)>
+              </ForwardRef(ButtonGroup)>
+            </ForwardRef(Grid)>
+            <ForwardRef(Grid)
+              item={true}
+              md={12}
+              sm={12}
+              xl={12}
+              xs={12}
+            >
+              <ForwardRef(Box)
+                sx={
+                  Object {
+                    "display": Object {
+                      "md": "contents",
+                      "sm": "contents",
+                      "xl": "contents",
+                      "xs": "contents",
+                    },
+                  }
+                }
+              >
+                <ForwardRef(Button)
+                  className="cartButton"
+                  color="primary"
+                  id="cart-btn"
+                  onClick={[Function]}
+                  startIcon={<Memo />}
+                  variant="outlined"
+                >
+                   
+                  Items
+                </ForwardRef(Button)>
+                <ForwardRef(Popover)
+                  PaperProps={
+                    Object {
+                      "style": Object {
+                        "backgroundColor": "#efefef",
+                        "height": "80%",
+                        "margin": 0,
+                        "padding": 0,
+                        "width": "30%",
+                        "zIndex": "inherit",
+                      },
+                    }
+                  }
+                  anchorEl={null}
+                  anchorOrigin={
+                    Object {
+                      "horizontal": "right",
+                      "vertical": "bottom",
+                    }
+                  }
+                  onClose={[Function]}
+                  open={false}
+                  transformOrigin={
+                    Object {
+                      "horizontal": "right",
+                      "vertical": "top",
+                    }
+                  }
+                >
+                  <ForwardRef(Typography)
+                    component="div"
+                  >
+                    <Cart />
+                  </ForwardRef(Typography)>
+                </ForwardRef(Popover)>
+              </ForwardRef(Box)>
+            </ForwardRef(Grid)>
+          </ForwardRef(Grid)>
+        </ForwardRef(Grid)>
+      </ForwardRef(Grid)>
+    </ForwardRef(Toolbar)>
+  </ForwardRef(Container)>
+</ForwardRef(AppBar)>
+`;
